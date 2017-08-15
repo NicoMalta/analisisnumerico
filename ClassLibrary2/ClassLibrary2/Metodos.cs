@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary2
 {
-    public class ResultadoRaiz
+
+    public class Configuraciones
     {
-        public int valorRaiz { get; set; }
         public int iteraciones { get; set; }
         public int Tolerancia { get; set; }
+    }
+    public class ResultadoRaiz : Configuraciones
+    {
+        public int valorRaiz { get; set; }
+        public int XD { get; set; }
+        public int XI { get; set; }
 
         public ResultadoRaiz( int iteraciones, int tolerancia)
         {
@@ -19,56 +25,60 @@ namespace ClassLibrary2
             this.Tolerancia = tolerancia;
         }
 
-        public static ResultadoRaiz Carga( int iteraciones, int tolerancia)
-        {
-            return new ResultadoRaiz( iteraciones, tolerancia);
-        }
+
     }
 
     public class Raices
     {
-        public decimal Biseccion(int xi, int xd, ResultadoRaiz nuevoResultado)
+        public  ResultadoRaiz Biseccion(ResultadoRaiz nuevoResultado)
         {
             
             int xant = 0;
             int c = 0;
             int xr;
+            bool band = false;
             decimal error;
-            if ((funcion(xi) * funcion (xd) ) < 0)
+            if ((funcion(nuevoResultado.XI) * funcion (nuevoResultado.XD) ) < 0)
             {
-                c++;
-                xr = (xi + xd) / 2;
+                xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
                 error = Math.Abs((xr - xant) / xr);
 
-                if ((Math.Abs(funcion(xr)) < nuevoResultado.Tolerancia) || (error < nuevoResultado.Tolerancia) || (c >= nuevoResultado.iteraciones))
+
+                while ((Math.Abs(funcion(xr)) >= nuevoResultado.Tolerancia) || (error < nuevoResultado.Tolerancia) || (c >= nuevoResultado.iteraciones))
                 {
-                    if ((funcion(xi) * funcion(xd)) < 0)
+                    c++;
+                    xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
+                    error = Math.Abs((xr - xant) / xr);
+                    if ((funcion(nuevoResultado.XI) * funcion(nuevoResultado.XD)) < 0)
                     {
-                        xd = xr;
+                        nuevoResultado.XD = xr;
                     }
                     else
                     {
-                        xi = xr;
+                        nuevoResultado.XI = xr;
                     }
                     xant = xr;
+                    band = true;
                 }
-                else
+
+                if (band == false)
                 {
                     nuevoResultado.valorRaiz = xr;
                 }
+
             }
             else
             {
-                if (funcion(xi) == 0)
+                if (funcion(nuevoResultado.XI) == 0)
                 {
-                    nuevoResultado.valorRaiz = xi;
+                    nuevoResultado.valorRaiz = nuevoResultado.XI;
                 }
                 else
                 {
-                    nuevoResultado.valorRaiz = xd;
+                    nuevoResultado.valorRaiz = nuevoResultado.XD;
                 }
             }
-            return nuevoResultado.valorRaiz;
+            return nuevoResultado;
         }
 
         public double funcion(int x)

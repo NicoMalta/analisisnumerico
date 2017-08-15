@@ -1,0 +1,12 @@
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\bin\Debug\ClassLibrary2.dll
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\bin\Debug\ClassLibrary2.pdb
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\Formulario.csprojResolveAssemblyReference.cache
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\Formulario.csproj.GenerateResource.Cache
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources

@@ -1,0 +1,5 @@
+D:\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+D:\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+D:\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+D:\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
+D:\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\AnalisisNumerico.csprojResolveAssemblyReference.cache

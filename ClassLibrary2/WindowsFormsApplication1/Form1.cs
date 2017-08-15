@@ -20,12 +20,14 @@ namespace WindowsFormsApplication1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ResultadoRaiz nuevo = ResultadoRaiz.Carga(Convert.ToInt32(textBox1), Convert.ToInt32(textBox2));
+            var form = new Form2();
+
+            form.Show();
         }
     }
 }

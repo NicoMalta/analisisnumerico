@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{33E31105-244E-4533-A901-F2360542EDCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalisisNumerico", "ClassLibrary2\AnalisisNumerico.csproj", "{33E31105-244E-4533-A901-F2360542EDCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{D757A2E7-AF52-4515-B016-2D4213601421}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formulario", "WindowsFormsApplication1\Formulario.csproj", "{D757A2E7-AF52-4515-B016-2D4213601421}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
