@@ -1,5 +1,4 @@
-﻿using ClassLibrary2;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,17 +24,24 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Xi_textbox_MouseEnter(object sender, MouseEventArgs e)
         {
-            ResultadoRaiz resultado = new ResultadoRaiz(Convert.ToInt32(Iteraciones.Text), Convert.ToInt32(Error.Text));
-            resultado.XI = Convert.ToInt32(XD.Text);
-            resultado.XD = Convert.ToInt32(XI.Text);
+            Xi_textbox.Text = "";
+        }
 
-            var Metodos = new Metodos();
+        private void Xd_textbox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Xd_textbox.Text = "";
+        }
 
-            Metodos.Biseccion(resultado);
+        private void iter_textbox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            iteraciones_textbox.Text = "";
+        }
 
-            Resultado.Content = Convert.ToString(resultado.valorRaiz);
+        private void error_textbox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tolerancia_textbox.Text = "";
         }
     }
 }
