@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.mariuszgromada.math.mxparser;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace ClassLibrary2
         public int iteraciones { get; set; }
         public int Tolerancia { get; set; }
     }
+
     public class ResultadoRaiz : Configuraciones
     {
         public int valorRaiz { get; set; }
@@ -28,7 +30,7 @@ namespace ClassLibrary2
 
     }
 
-    public class Raices
+    public class Metodos
     {
         public  ResultadoRaiz Biseccion(ResultadoRaiz nuevoResultado)
         {
@@ -98,6 +100,19 @@ namespace ClassLibrary2
         {
             double resultado = 0;
             return resultado;
+        }
+
+        public ResultadoRaiz ReglaFalsa(ResultadoRaiz nuevoResultado)
+        {
+            Function f = new Function("f(x) = x ^ 2");
+
+            Argument a1 = new Argument("X =2");
+
+            Expression R = new Expression("f(x)", f, a1);
+
+            var a = R.calculate();
+            
+            return nuevoResultado;
         }
     }
 }

@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             resultado.XI = Convert.ToInt32(textBox3.Text);
             resultado.XD = Convert.ToInt32(textBox4.Text);
 
-            var Metodos = new Raices();
+            var Metodos = new Metodos();
 
             Metodos.Biseccion(resultado);
 
