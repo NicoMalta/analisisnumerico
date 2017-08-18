@@ -31,5 +31,24 @@ namespace WpfApp1
 
             a.Show();
         }
+
+        private void entro(object sender, MouseEventArgs e)
+        {
+            label_biseccion.FontStyle = FontStyles.Italic;
+        }
+
+        private void salgo(object sender, MouseEventArgs e)
+        {
+
+            label_biseccion.FontStyle = FontStyles.Normal;
+        }
+
+        private void label_biseccion_Click(object sender, RoutedEventArgs e)
+        {
+
+            Window1 nuevo = new Window1();
+            nuevo.Show();
+            this.Close();
+        }
     }
 }

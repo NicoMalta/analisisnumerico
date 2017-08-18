@@ -43,5 +43,15 @@ namespace WpfApp1
         {
             tolerancia_textbox.Text = "";
         }
+
+        private void hacerclick(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void tolerancia_textbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

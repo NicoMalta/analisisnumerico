@@ -10,3 +10,16 @@ D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\Formulario.
 D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 D:\analisisnumerico\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\bin\Debug\ClassLibrary2.dll
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\bin\Debug\MathParser.org-mXparser.Net452.dll
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\bin\Debug\ClassLibrary2.pdb
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\obj\Debug\Formulario.csprojResolveAssemblyReference.cache
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\WindowsFormsApplication1\obj\Debug\Formulario.csproj.GenerateResource.Cache

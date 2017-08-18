@@ -15,8 +15,8 @@
         <TextBox x:Name="Xi_textbox" HorizontalAlignment="Left" Height="23" Margin="94,61,0,0" TextWrapping="Wrap" Text="Ingresar xi" VerticalAlignment="Top" Width="179" MouseEnter="Xi_textbox_MouseEnter" />
         <TextBox x:Name="Xd_textbox" HorizontalAlignment="Left" Height="23" Margin="94,97,0,0" TextWrapping="Wrap" Text="Ingresar xd" VerticalAlignment="Top" Width="179" MouseEnter="Xd_textbox_MouseEnter" />
         <TextBox x:Name="iteraciones_textbox" HorizontalAlignment="Left" Height="23" Margin="173,141,0,0" TextWrapping="Wrap" Text="Nº de iteraciones" VerticalAlignment="Top" Width="100" MouseEnter="iter_textbox_MouseEnter" />
-        <TextBox x:Name="tolerancia_textbox" HorizontalAlignment="Left" Height="23" Margin="173,181,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" />
-        <Button Content="Empezar" HorizontalAlignment="Left" Margin="467,260,0,0"  VerticalAlignment="Top" Width="90" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="14" BorderThickness="0">
+        <TextBox x:Name="tolerancia_textbox" HorizontalAlignment="Left" Height="23" Margin="173,181,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" TextChanged="tolerancia_textbox_TextChanged" />
+        <Button Content="Empezar" HorizontalAlignment="Left" Margin="467,260,0,0"  VerticalAlignment="Top" Width="90" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="14" BorderThickness="0" Click="hacerclick">
             <Button.Effect>
                 <DropShadowEffect Color="White" Opacity="0.5"/>
             </Button.Effect>

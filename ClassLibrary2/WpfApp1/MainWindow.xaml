@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Opacity="0.86">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="206,201,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-
+        <Rectangle Fill="#FF054F2E" HorizontalAlignment="Left" Height="350" Stroke="Black" VerticalAlignment="Top" Width="525"/>
+        <Button x:Name="label_biseccion" Content="Bisección" HorizontalAlignment="Left" Margin="172,139,0,0" VerticalAlignment="Top"  MouseEnter="entro" MouseLeave="salgo" FontFamily="Narkisim" FontSize="48" Background="{x:Null}" BorderThickness="0" Cursor="Hand" Grid.IsSharedSizeScope="True" Foreground="Black" Click="label_biseccion_Click" FontWeight="Bold"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="398,240,0,0" VerticalAlignment="Top" Width="100">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
+        </Image>
+        <Viewbox HorizontalAlignment="Left" Height="100" Margin="249,266,0,-16" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
