@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,17 +21,14 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public bool ContadorClick_biseccion { get; set; }
+        public bool ContadorClick_reglafalsa { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Window1 a = new Window1();
-
-            a.Show();
-        }
 
         private void entro(object sender, MouseEventArgs e)
         {
@@ -43,13 +41,7 @@ namespace WpfApp1
            // label_biseccion.FontStyle = FontStyles.Normal;
         }
 
-        private void label_biseccion_Click(object sender, RoutedEventArgs e)
-        {
 
-            Window1 nuevo = new Window1();
-            nuevo.Show();
-            this.Close();
-        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -63,9 +55,27 @@ namespace WpfApp1
 
         private void biseccion_Click(object sender, RoutedEventArgs e)
         {
-            Window1 a = new Window1();
-            a.Show();
-            this.Close();
+            //Window1 a = new Window1();
+            //a.Show();
+            //this.Close();
+            ContadorClick_reglafalsa = false;
+            var bc = new BrushConverter();
+            if (ContadorClick_biseccion == false)
+            {
+               
+                biseccion.Background = (Brush)bc.ConvertFrom("#FF343131");
+                grid2.Visibility = Visibility.Visible;
+                grid3.Visibility = Visibility.Hidden;
+                regla_falsa.Background = (Brush)bc.ConvertFrom("#FF232323");
+                ContadorClick_biseccion = true;
+            }
+            else
+            {
+                grid2.Visibility = Visibility.Hidden;
+                biseccion.Background = (Brush)bc.ConvertFrom("#FF232323");
+                ContadorClick_biseccion = false;
+            }
+
         }
 
         private void AgrandoCruz(object sender, MouseEventArgs e)
@@ -82,29 +92,124 @@ namespace WpfApp1
 
         private void Grey_Biseccion(object sender, MouseEventArgs e)
         {
-            biseccion.Background = Brushes.DarkGray;
+           // biseccion.Background = Brushes.DarkGray;
         }
 
         private void White_Biseccion(object sender, MouseEventArgs e)
         {
-            biseccion.Background = Brushes.White;
+            //biseccion.Background = Brushes.White;
         }
 
         private void reglaFalsa_Click(object sender, RoutedEventArgs e)
         {
-            ReglaFalsa a = new ReglaFalsa();
-            a.Show();
-            this.Close();
+            var bc = new BrushConverter();
+            ContadorClick_biseccion = false;
+            if (ContadorClick_reglafalsa == false)
+            {
+                regla_falsa.Background = (Brush)bc.ConvertFrom("#FF343131");
+                grid3.Visibility = Visibility.Visible;
+                grid2.Visibility = Visibility.Hidden;
+                biseccion.Background = (Brush)bc.ConvertFrom("#FF232323");
+                ContadorClick_reglafalsa = true;
+            }
+            else
+            {
+                regla_falsa.Background = (Brush)bc.ConvertFrom("#FF232323");
+                grid3.Visibility = Visibility.Hidden;
+                ContadorClick_reglafalsa = false;
+            }
+
         }
 
         private void ReglaFalsa_Grey(object sender, MouseEventArgs e)
         {
-            regla_falsa.Background = Brushes.DarkGray;
+           // regla_falsa.Background = Brushes.DarkGray;
         }
 
         private void ReglaFalsa_White(object sender, MouseEventArgs e)
         {
-            regla_falsa.Background = Brushes.White;
+          //  regla_falsa.Background = Brushes.White;
+        }
+
+        private void Xi_textbox_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Xd_textbox_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void iter_textbox_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void error_textbox_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void hacerclick(object sender, RoutedEventArgs e)
+        {
+            ResultadoRaiz resultado = new ResultadoRaiz(Convert.ToInt32(iteraciones_textbox_biseccion.Text), Convert.ToInt32(tolerancia_textbox_biseccion.Text));
+            resultado.XI = Convert.ToInt32(Xi_textbox_biseccion.Text);
+            resultado.XD = Convert.ToInt32(Xd_textbox_biseccion.Text);
+
+            var Metodos = new Metodos();
+
+            Metodos.Biseccion(resultado);
+
+            Resultado_label_biseccion.Content = "Raíz: " + resultado.valorRaiz;
+            ResultadoError_label_biseccion.Content = "Error: " + resultado.error;
+            Resultado_label_biseccion.Visibility = Visibility.Visible;
+            ResultadoError_label_biseccion.Visibility = Visibility.Visible;
+        }
+
+        private void tolerancia_textbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Xi_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Xi_textbox_biseccion.Text = "";
+            Xi_textbox_reglafalsa.Text = "";
+        }
+
+        private void Xd_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Xd_textbox_biseccion.Text = "";
+            Xd_textbox_reglafalsa.Text = "";
+        }
+
+        private void iteraciones_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            iteraciones_textbox_biseccion.Text = "";
+            iteraciones_textbox_reglafalsa.Text = "";
+        }
+
+        private void tolerancia_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            tolerancia_textbox_biseccion.Text = "";
+            tolerancia_textbox_reglafalsa.Text = "";
+        }
+
+        private void ResolverRF(object sender, RoutedEventArgs e)
+        {
+            ResultadoRaiz resultado = new ResultadoRaiz(Convert.ToInt32(iteraciones_textbox_reglafalsa.Text), Convert.ToInt32(tolerancia_textbox_reglafalsa.Text));
+            resultado.XI = Convert.ToInt32(Xi_textbox_reglafalsa.Text);
+            resultado.XD = Convert.ToInt32(Xd_textbox_reglafalsa.Text);
+
+            var Metodos = new Metodos();
+
+            Metodos.ReglaFalsa(resultado);
+
+            Resultado_label_reglafalsa.Content = "Raíz: " + resultado.valorRaiz;
+            ResultadoError_label_reglafalsa.Content = "Error: " + resultado.error;
+            Resultado_label_reglafalsa.Visibility = Visibility.Visible;
+            ResultadoError_label_reglafalsa.Visibility = Visibility.Visible;
         }
     }
 }

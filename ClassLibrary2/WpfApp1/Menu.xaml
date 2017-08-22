@@ -6,14 +6,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"      
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Analisis Numerico" Height="480.5" Width="421.5" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Images/hashtag.png" Background="#FF343131" BorderBrush="Black" OpacityMask="Black" AllowsTransparency="True" WindowStyle="None">
+        Title="Analisis Numerico" Height="504.5" Width="1075.5" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Images/hashtag.png" Background="#FF343131" BorderBrush="Black" OpacityMask="Black" AllowsTransparency="True" WindowStyle="None">
     <Grid>
-        <Button x:Name="Cruz" Content="X" HorizontalAlignment="Left" Margin="396,10,0,0" VerticalAlignment="Top" Click="Button_Click_1" Background="{x:Null}" Foreground="White" FontSize="18" FontFamily="Verdana" FontWeight="Bold" RenderTransformOrigin="1.812,0.083" BorderThickness="0" BorderBrush="{x:Null}" Cursor="Hand" MouseEnter="AgrandoCruz" MouseLeave="AchicoCruz"/>
-        <Rectangle Fill="#FF191919" HorizontalAlignment="Left" Height="438" Margin="0,42,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="422" Opacity="0.6"/>
-        <Button x:Name="biseccion" Content="Bisección" HorizontalAlignment="Left" Margin="12,82,0,0" VerticalAlignment="Top" Width="400" Height="42" Background="White" FontFamily="Nirmala UI" FontSize="22" BorderThickness="0" Cursor="Hand" Click="biseccion_Click" MouseEnter="Grey_Biseccion" MouseLeave="White_Biseccion"/>
-        <Button x:Name="regla_falsa" Content="Regla Falsa" HorizontalAlignment="Left" Margin="12,144,0,0" VerticalAlignment="Top" Width="400" Height="42" Background="White" FontFamily="Nirmala UI" FontSize="22" BorderThickness="0" Cursor="Hand" Click="reglaFalsa_Click" MouseEnter="ReglaFalsa_Grey" MouseLeave="ReglaFalsa_White"/>
+        <Rectangle Fill="#FF191919" HorizontalAlignment="Left" Height="462" Margin="0,42,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="287" Opacity="0.6"/>
+        <Button x:Name="biseccion" Content="Bisección" HorizontalAlignment="Left" Margin="0,82,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="22" BorderThickness="0" Cursor="Hand" Click="biseccion_Click" MouseEnter="Grey_Biseccion" MouseLeave="White_Biseccion" Foreground="White"/>
+        <Button x:Name="regla_falsa" Content="Regla Falsa" HorizontalAlignment="Left" Margin="0,144,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="22" BorderThickness="0" Cursor="Hand" Click="reglaFalsa_Click" MouseEnter="ReglaFalsa_Grey" MouseLeave="ReglaFalsa_White" Foreground="White"/>
+        <Rectangle Fill="#FF232323" HorizontalAlignment="Left" Height="42" Stroke="Black" VerticalAlignment="Top" Width="1076" StrokeThickness="0"/>
         <Label Content="Analisis Númerico" HorizontalAlignment="Left" Margin="44,0,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="20"/>
         <Image HorizontalAlignment="Left" Height="25" Margin="12,7,0,0" VerticalAlignment="Top" Width="32" Source="/Images/hashtag.png" RenderTransformOrigin="0.641,0.38"/>
+        <Button x:Name="Cruz" Content="X" HorizontalAlignment="Left" Margin="1052,10,0,0" VerticalAlignment="Top" Click="Button_Click_1" Background="{x:Null}" Foreground="White" FontSize="18" FontFamily="Verdana" FontWeight="Bold" RenderTransformOrigin="1.812,0.083" BorderThickness="0" BorderBrush="{x:Null}" Cursor="Hand" MouseEnter="AgrandoCruz" MouseLeave="AchicoCruz"/>
+        <Grid x:Name="grid2" HorizontalAlignment="Left" Height="457" Margin="292,47,0,0" VerticalAlignment="Top" Width="784" Visibility="Hidden">
+            <Rectangle HorizontalAlignment="Left" Height="400" Stroke="#FF838383" StrokeThickness="5" VerticalAlignment="Top" Width="726" Margin="48,47,0,0"/>
+            <Label Content="Bisección" HorizontalAlignment="Left" Margin="663,10,0,0" VerticalAlignment="Top" Width="121" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="XI_biseccion" Content="XI:" HorizontalAlignment="Left" Margin="69,72,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold"/>
+            <Label x:Name="XD_biseccion" Content="XD: " HorizontalAlignment="Left" Margin="69,116,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="Iteraciones_biseccion" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="75,170,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="Tolerancia_biseccion" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="69,221,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="Xi_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="139,78,0,0" TextWrapping="Wrap" Text="Ingresar xi" VerticalAlignment="Top" Width="179" MouseEnter="Xi_textbox_MouseEnter" PreviewMouseDown="Xi_textbox_PreviewMouseDown" FontSize="20" />
+            <TextBox x:Name="Xd_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="140,122,0,0" TextWrapping="Wrap" Text="Ingresar xd" VerticalAlignment="Top" Width="178" MouseEnter="Xd_textbox_MouseEnter" PreviewMouseDown="Xd_textbox_PreviewMouseDown" FontSize="20" />
+            <TextBox x:Name="iteraciones_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="242,176,0,0" TextWrapping="Wrap" Text="Nº de iteraciones" VerticalAlignment="Top" Width="169" MouseEnter="iter_textbox_MouseEnter" PreviewMouseDown="iteraciones_textbox_PreviewMouseDown" RenderTransformOrigin="0.595,0.978" FontSize="20" />
+            <TextBox x:Name="tolerancia_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="242,227,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" TextChanged="tolerancia_textbox_TextChanged" PreviewMouseDown="tolerancia_textbox_PreviewMouseDown" FontSize="20" />
+            <Button Content="Resolver" HorizontalAlignment="Left" Margin="628,391,0,0"  VerticalAlignment="Top" Width="110" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="18" BorderThickness="0" Click="hacerclick" RenderTransformOrigin="1.164,0.5">
+                <Button.Effect>
+                    <DropShadowEffect Color="White" Opacity="0.5"/>
+                </Button.Effect>
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="LightGray" Offset="0.997"/>
+                        <GradientStop Color="White"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label x:Name="Resultado_label_biseccion" Content="Raíz:" HorizontalAlignment="Left" Margin="75,348,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
+            <Label x:Name="ResultadoError_label_biseccion" Content="Error:" HorizontalAlignment="Left" Margin="75,385,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
+        </Grid>
+
+        <Grid x:Name="grid3" HorizontalAlignment="Left" Height="457" Margin="292,47,0,0" VerticalAlignment="Top" Width="784" Visibility="Hidden">
+            <Rectangle HorizontalAlignment="Left" Height="400" Stroke="#FF838383" StrokeThickness="5" VerticalAlignment="Top" Width="726" Margin="48,47,0,0"/>
+            <Label Content="Regla Falsa" HorizontalAlignment="Left" Margin="640,8,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="XI_reglafalsa" Content="XI:" HorizontalAlignment="Left" Margin="69,72,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold"/>
+            <Label x:Name="XD_reglafalsa" Content="XD: " HorizontalAlignment="Left" Margin="69,116,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="Iteraciones_reglafalsa" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="75,170,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="Tolerancia_reglafalsa" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="69,221,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="Xi_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="139,78,0,0" TextWrapping="Wrap" Text="Ingresar xi" VerticalAlignment="Top" Width="179" MouseEnter="Xi_textbox_MouseEnter" PreviewMouseDown="Xi_textbox_PreviewMouseDown" FontSize="20" />
+            <TextBox x:Name="Xd_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="140,122,0,0" TextWrapping="Wrap" Text="Ingresar xd" VerticalAlignment="Top" Width="178" MouseEnter="Xd_textbox_MouseEnter" PreviewMouseDown="Xd_textbox_PreviewMouseDown" FontSize="20" />
+            <TextBox x:Name="iteraciones_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="242,176,0,0" TextWrapping="Wrap" Text="Nº de iteraciones" VerticalAlignment="Top" Width="169" MouseEnter="iter_textbox_MouseEnter" PreviewMouseDown="iteraciones_textbox_PreviewMouseDown" RenderTransformOrigin="0.595,0.978" FontSize="20" />
+            <TextBox x:Name="tolerancia_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="242,227,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" TextChanged="tolerancia_textbox_TextChanged" PreviewMouseDown="tolerancia_textbox_PreviewMouseDown" FontSize="20" />
+            <Button Content="Resolver" HorizontalAlignment="Left" Margin="628,391,0,0"  VerticalAlignment="Top" Width="110" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="18" BorderThickness="0" Click="ResolverRF" RenderTransformOrigin="1.164,0.5">
+                <Button.Effect>
+                    <DropShadowEffect Color="White" Opacity="0.5"/>
+                </Button.Effect>
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="LightGray" Offset="0.997"/>
+                        <GradientStop Color="White"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label x:Name="Resultado_label_reglafalsa" Content="Raíz:" HorizontalAlignment="Left" Margin="75,348,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
+            <Label x:Name="ResultadoError_label_reglafalsa" Content="Error:" HorizontalAlignment="Left" Margin="75,385,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
+        </Grid>
 
     </Grid>
 

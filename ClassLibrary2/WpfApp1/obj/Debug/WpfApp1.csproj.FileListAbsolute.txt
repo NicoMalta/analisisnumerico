@@ -63,8 +63,4 @@ C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Micr
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\App.baml
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\Menu.g.cs
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\Biseccion.g.cs
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\Menu.baml
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\Biseccion.baml
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\ReglaFalsa.g.cs
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\ReglaFalsa.baml
