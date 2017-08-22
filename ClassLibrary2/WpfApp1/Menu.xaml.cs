@@ -1,4 +1,5 @@
 ﻿using ClassLibrary2;
+using org.mariuszgromada.math.mxparser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -156,10 +157,11 @@ namespace WpfApp1
             ResultadoRaiz resultado = new ResultadoRaiz(Convert.ToInt32(iteraciones_textbox_biseccion.Text), Convert.ToInt32(tolerancia_textbox_biseccion.Text));
             resultado.XI = Convert.ToInt32(Xi_textbox_biseccion.Text);
             resultado.XD = Convert.ToInt32(Xd_textbox_biseccion.Text);
+            Function f = new Function("f(x) = " + fx_biseccion_textbox.Text);
 
             var Metodos = new Metodos();
 
-            Metodos.Biseccion(resultado);
+            Metodos.Biseccion(resultado, f);
 
             Resultado_label_biseccion.Content = "Raíz: " + resultado.valorRaiz;
             ResultadoError_label_biseccion.Content = "Error: " + resultado.error;
@@ -171,6 +173,12 @@ namespace WpfApp1
         {
 
         }
+
+        private void fx_biseccion_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            fx_biseccion_textbox.Text = "";
+        }
+
 
         private void Xi_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -201,15 +209,20 @@ namespace WpfApp1
             ResultadoRaiz resultado = new ResultadoRaiz(Convert.ToInt32(iteraciones_textbox_reglafalsa.Text), Convert.ToInt32(tolerancia_textbox_reglafalsa.Text));
             resultado.XI = Convert.ToInt32(Xi_textbox_reglafalsa.Text);
             resultado.XD = Convert.ToInt32(Xd_textbox_reglafalsa.Text);
-
+            Function f = new Function("f(x) = " + fx_biseccion_textbox.Text);
             var Metodos = new Metodos();
 
-            Metodos.ReglaFalsa(resultado);
+            Metodos.ReglaFalsa(resultado, f);
 
             Resultado_label_reglafalsa.Content = "Raíz: " + resultado.valorRaiz;
             ResultadoError_label_reglafalsa.Content = "Error: " + resultado.error;
             Resultado_label_reglafalsa.Visibility = Visibility.Visible;
             ResultadoError_label_reglafalsa.Visibility = Visibility.Visible;
+        }
+
+        private void fx_reglafalsa_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            fx_reglafalsa_textbox.Text = "";
         }
     }
 }

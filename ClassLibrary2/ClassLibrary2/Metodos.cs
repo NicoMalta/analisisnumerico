@@ -35,31 +35,41 @@ namespace ClassLibrary2
     {
         public double error { get; set; }
 
-        public  ResultadoRaiz Biseccion(ResultadoRaiz nuevoResultado)
+        public  ResultadoRaiz Biseccion(ResultadoRaiz nuevoResultado, Function f)
         {
             
+            Argument Xi = new Argument(" x = " + nuevoResultado.XI);
+            Argument Xd = new Argument(" x = " + nuevoResultado.XD);
+            Argument Xr = new Argument(" x = 0 ");
+            Expression Fxi = new Expression("f(x)", f, Xi);
+            Expression Fxd = new Expression("f(x)", f, Xd);
+            Expression Fxr = new Expression("f(x)", f, Xr);
             double xant = 0;
             int c = 0;
             double xr;
             bool band = false;
-            if ((funcion(nuevoResultado.XI) * funcion (nuevoResultado.XD) ) < 0)
+            if ((Fxi.calculate() * Fxd.calculate()) < 0)
             {
                 xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
+                Xr = new Argument(" x = " + xr );
                 error = Math.Abs((xr - xant) / xr);
 
 
-                while ((Math.Abs(funcion(xr)) >= nuevoResultado.Tolerancia) || (error < nuevoResultado.Tolerancia) || (c >= nuevoResultado.iteraciones))
+                while (((Math.Abs(Fxr.calculate()) >= nuevoResultado.Tolerancia)) && ((error < nuevoResultado.Tolerancia)) && ((c <= nuevoResultado.iteraciones)))
                 {
                     c++;
                     xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
+                    Xr = new Argument(" x = " + xr);
                     error = Math.Abs((xr - xant) / xr);
-                    if ((funcion(nuevoResultado.XI) * funcion(nuevoResultado.XD)) < 0)
+                    if ((Fxi.calculate() * Fxd.calculate()) < 0)
                     {
                         nuevoResultado.XD = xr;
+                        Xd = new Argument(" x = " + nuevoResultado.XI);
                     }
                     else
                     {
                         nuevoResultado.XI = xr;
+                        Xi = new Argument(" x = " + nuevoResultado.XD);
                     }
                     xant = xr;
                     band = true;
@@ -73,7 +83,7 @@ namespace ClassLibrary2
             }
             else
             {
-                if (funcion(nuevoResultado.XI) == 0)
+                if (Fxi.calculate() == 0)
                 {
                     nuevoResultado.valorRaiz = nuevoResultado.XI;
                 }
@@ -86,43 +96,34 @@ namespace ClassLibrary2
             return nuevoResultado;
         }
 
-        public double funcion(double x)
-        {
-            double resultado = 0;
-            resultado = Math.Pow((x - 3), 2) - 1;
-            return resultado;
-        }
 
-        public double funcion(double x, double y)
+        public ResultadoRaiz ReglaFalsa(ResultadoRaiz nuevoResultado, Function f)
         {
-            double resultado = 0;
-            return resultado;
-        }
 
-        public double funcion(int x, int y, int z)
-        {
-            double resultado = 0;
-            return resultado;
-        }
-
-        public ResultadoRaiz ReglaFalsa(ResultadoRaiz nuevoResultado)
-        {
+            Argument Xi = new Argument(" x = " + nuevoResultado.XI);
+            Argument Xd = new Argument(" x = " + nuevoResultado.XD);
+            Argument Xr = new Argument(" x = 0 ");
+            Expression Fxi = new Expression("f(x)", f, Xi);
+            Expression Fxd = new Expression("f(x)", f, Xd);
+            Expression Fxr = new Expression("f(x)", f, Xr);
             double xant = 0;
             int c = 0;
             double xr;
             bool band = false;
-            if ((funcion(nuevoResultado.XI) * funcion(nuevoResultado.XD)) < 0)
+         
+
+            if ((Fxi.calculate() * Fxd.calculate()) < 0)
             {
                 xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
                 error = Math.Abs((xr - xant) / xr);
 
 
-                while ((Math.Abs(funcion(xr)) >= nuevoResultado.Tolerancia) || (error < nuevoResultado.Tolerancia) || (c >= nuevoResultado.iteraciones))
+                while (((Math.Abs(Fxr.calculate()) >= nuevoResultado.Tolerancia)) && ((error < nuevoResultado.Tolerancia)) && ((c <= nuevoResultado.iteraciones)))
                 {
                     c++;
-                    xr = nuevoResultado.XD - ((funcion(nuevoResultado.XI) - (nuevoResultado.XI - nuevoResultado.XD)) / ((funcion(nuevoResultado.XI) - (funcion(nuevoResultado.XD)))));
+                    xr = nuevoResultado.XD - (Fxi.calculate() - (nuevoResultado.XI - nuevoResultado.XD)) / ((Fxi.calculate() - Fxd.calculate()));
                     error = Math.Abs((xr - xant) / xr);
-                    if ((funcion(nuevoResultado.XI) * funcion(nuevoResultado.XD)) < 0)
+                    if (Fxi.calculate() * Fxd.calculate() < 0)
                     {
                         nuevoResultado.XD = xr;
                     }
@@ -142,7 +143,7 @@ namespace ClassLibrary2
             }
             else
             {
-                if (funcion(nuevoResultado.XI) == 0)
+                if (Fxi.calculate() == 0)
                 {
                     nuevoResultado.valorRaiz = nuevoResultado.XI;
                 }
@@ -153,7 +154,7 @@ namespace ClassLibrary2
             }
             return nuevoResultado;
 
-        
+
         }
     }
 }

@@ -18,14 +18,14 @@
         <Grid x:Name="grid2" HorizontalAlignment="Left" Height="457" Margin="292,47,0,0" VerticalAlignment="Top" Width="784" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Left" Height="400" Stroke="#FF838383" StrokeThickness="5" VerticalAlignment="Top" Width="726" Margin="48,47,0,0"/>
             <Label Content="Bisección" HorizontalAlignment="Left" Margin="663,10,0,0" VerticalAlignment="Top" Width="121" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="XI_biseccion" Content="XI:" HorizontalAlignment="Left" Margin="69,72,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold"/>
-            <Label x:Name="XD_biseccion" Content="XD: " HorizontalAlignment="Left" Margin="69,116,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="Iteraciones_biseccion" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="75,170,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="Tolerancia_biseccion" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="69,221,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="Xi_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="139,78,0,0" TextWrapping="Wrap" Text="Ingresar xi" VerticalAlignment="Top" Width="179" MouseEnter="Xi_textbox_MouseEnter" PreviewMouseDown="Xi_textbox_PreviewMouseDown" FontSize="20" />
-            <TextBox x:Name="Xd_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="140,122,0,0" TextWrapping="Wrap" Text="Ingresar xd" VerticalAlignment="Top" Width="178" MouseEnter="Xd_textbox_MouseEnter" PreviewMouseDown="Xd_textbox_PreviewMouseDown" FontSize="20" />
-            <TextBox x:Name="iteraciones_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="242,176,0,0" TextWrapping="Wrap" Text="Nº de iteraciones" VerticalAlignment="Top" Width="169" MouseEnter="iter_textbox_MouseEnter" PreviewMouseDown="iteraciones_textbox_PreviewMouseDown" RenderTransformOrigin="0.595,0.978" FontSize="20" />
-            <TextBox x:Name="tolerancia_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="242,227,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" TextChanged="tolerancia_textbox_TextChanged" PreviewMouseDown="tolerancia_textbox_PreviewMouseDown" FontSize="20" />
+            <Label x:Name="XI_biseccion" Content="XI:" HorizontalAlignment="Left" Margin="69,146,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold" RenderTransformOrigin="0.743,2.603"/>
+            <Label x:Name="XD_biseccion" Content="XD: " HorizontalAlignment="Left" Margin="69,190,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.755,0.385"/>
+            <Label x:Name="Iteraciones_biseccion" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="69,234,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.512,1.513"/>
+            <Label x:Name="Tolerancia_biseccion" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="69,278,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="Xi_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="139,152,0,0" TextWrapping="Wrap" Text="Ingresar xi" VerticalAlignment="Top" Width="179" MouseEnter="Xi_textbox_MouseEnter" PreviewMouseDown="Xi_textbox_PreviewMouseDown" FontSize="20" RenderTransformOrigin="0.492,3.133" />
+            <TextBox x:Name="Xd_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="140,196,0,0" TextWrapping="Wrap" Text="Ingresar xd" VerticalAlignment="Top" Width="178" MouseEnter="Xd_textbox_MouseEnter" PreviewMouseDown="Xd_textbox_PreviewMouseDown" FontSize="20" />
+            <TextBox x:Name="iteraciones_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="242,240,0,0" TextWrapping="Wrap" Text="Nº de iteraciones" VerticalAlignment="Top" Width="169" MouseEnter="iter_textbox_MouseEnter" PreviewMouseDown="iteraciones_textbox_PreviewMouseDown" RenderTransformOrigin="0.595,0.978" FontSize="20" />
+            <TextBox x:Name="tolerancia_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="242,284,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" TextChanged="tolerancia_textbox_TextChanged" PreviewMouseDown="tolerancia_textbox_PreviewMouseDown" FontSize="20" />
             <Button Content="Resolver" HorizontalAlignment="Left" Margin="628,391,0,0"  VerticalAlignment="Top" Width="110" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="18" BorderThickness="0" Click="hacerclick" RenderTransformOrigin="1.164,0.5">
                 <Button.Effect>
                     <DropShadowEffect Color="White" Opacity="0.5"/>
@@ -39,19 +39,21 @@
             </Button>
             <Label x:Name="Resultado_label_biseccion" Content="Raíz:" HorizontalAlignment="Left" Margin="75,348,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
             <Label x:Name="ResultadoError_label_biseccion" Content="Error:" HorizontalAlignment="Left" Margin="75,385,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
+            <Label Content="F(x): " HorizontalAlignment="Left" Margin="68,85,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="fx_biseccion_textbox" HorizontalAlignment="Left" Height="30" Margin="140,93,0,0" TextWrapping="Wrap" Text="Ingresar Función" VerticalAlignment="Top" Width="271" FontSize="20" PreviewMouseDown="fx_biseccion_textbox_PreviewMouseDown"/>
         </Grid>
 
         <Grid x:Name="grid3" HorizontalAlignment="Left" Height="457" Margin="292,47,0,0" VerticalAlignment="Top" Width="784" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Left" Height="400" Stroke="#FF838383" StrokeThickness="5" VerticalAlignment="Top" Width="726" Margin="48,47,0,0"/>
             <Label Content="Regla Falsa" HorizontalAlignment="Left" Margin="640,8,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="XI_reglafalsa" Content="XI:" HorizontalAlignment="Left" Margin="69,72,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold"/>
-            <Label x:Name="XD_reglafalsa" Content="XD: " HorizontalAlignment="Left" Margin="69,116,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="Iteraciones_reglafalsa" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="75,170,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="Tolerancia_reglafalsa" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="69,221,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="Xi_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="139,78,0,0" TextWrapping="Wrap" Text="Ingresar xi" VerticalAlignment="Top" Width="179" MouseEnter="Xi_textbox_MouseEnter" PreviewMouseDown="Xi_textbox_PreviewMouseDown" FontSize="20" />
-            <TextBox x:Name="Xd_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="140,122,0,0" TextWrapping="Wrap" Text="Ingresar xd" VerticalAlignment="Top" Width="178" MouseEnter="Xd_textbox_MouseEnter" PreviewMouseDown="Xd_textbox_PreviewMouseDown" FontSize="20" />
-            <TextBox x:Name="iteraciones_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="242,176,0,0" TextWrapping="Wrap" Text="Nº de iteraciones" VerticalAlignment="Top" Width="169" MouseEnter="iter_textbox_MouseEnter" PreviewMouseDown="iteraciones_textbox_PreviewMouseDown" RenderTransformOrigin="0.595,0.978" FontSize="20" />
-            <TextBox x:Name="tolerancia_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="242,227,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" TextChanged="tolerancia_textbox_TextChanged" PreviewMouseDown="tolerancia_textbox_PreviewMouseDown" FontSize="20" />
+            <Label x:Name="XI_reglafalsa" Content="XI:" HorizontalAlignment="Left" Margin="75,160,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold"/>
+            <Label x:Name="XD_reglafalsa" Content="XD: " HorizontalAlignment="Left" Margin="75,204,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.632,2.936"/>
+            <Label x:Name="Iteraciones_reglafalsa" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="69,248,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="Tolerancia_reglafalsa" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="69,292,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="Xi_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="139,160,0,0" TextWrapping="Wrap" Text="Ingresar xi" VerticalAlignment="Top" Width="179" MouseEnter="Xi_textbox_MouseEnter" PreviewMouseDown="Xi_textbox_PreviewMouseDown" FontSize="20" />
+            <TextBox x:Name="Xd_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="140,204,0,0" TextWrapping="Wrap" Text="Ingresar xd" VerticalAlignment="Top" Width="178" MouseEnter="Xd_textbox_MouseEnter" PreviewMouseDown="Xd_textbox_PreviewMouseDown" FontSize="20" />
+            <TextBox x:Name="iteraciones_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="242,254,0,0" TextWrapping="Wrap" Text="Nº de iteraciones" VerticalAlignment="Top" Width="169" MouseEnter="iter_textbox_MouseEnter" PreviewMouseDown="iteraciones_textbox_PreviewMouseDown" RenderTransformOrigin="0.595,0.978" FontSize="20" />
+            <TextBox x:Name="tolerancia_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="242,292,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" TextChanged="tolerancia_textbox_TextChanged" PreviewMouseDown="tolerancia_textbox_PreviewMouseDown" FontSize="20" />
             <Button Content="Resolver" HorizontalAlignment="Left" Margin="628,391,0,0"  VerticalAlignment="Top" Width="110" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="18" BorderThickness="0" Click="ResolverRF" RenderTransformOrigin="1.164,0.5">
                 <Button.Effect>
                     <DropShadowEffect Color="White" Opacity="0.5"/>
@@ -65,6 +67,8 @@
             </Button>
             <Label x:Name="Resultado_label_reglafalsa" Content="Raíz:" HorizontalAlignment="Left" Margin="75,348,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
             <Label x:Name="ResultadoError_label_reglafalsa" Content="Error:" HorizontalAlignment="Left" Margin="75,385,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
+            <Label Content="F(x): " HorizontalAlignment="Left" Margin="68,85,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="fx_reglafalsa_textbox" HorizontalAlignment="Left" Height="30" Margin="140,92,0,0" TextWrapping="Wrap" Text="Ingresar Función" VerticalAlignment="Top" Width="271" FontSize="20" PreviewMouseDown="fx_reglafalsa_textbox_PreviewMouseDown"/>
         </Grid>
 
     </Grid>
