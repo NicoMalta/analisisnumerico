@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"      
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Analisis Numerico" Height="480.5" Width="421.5" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Images/hashtag.png" Background="#FF343131" BorderBrush="Black" OpacityMask="Black" AllowsTransparency="True" WindowStyle="None">
+    <Grid>
+        <Button x:Name="Cruz" Content="X" HorizontalAlignment="Left" Margin="396,10,0,0" VerticalAlignment="Top" Click="Button_Click_1" Background="{x:Null}" Foreground="White" FontSize="18" FontFamily="Verdana" FontWeight="Bold" RenderTransformOrigin="1.812,0.083" BorderThickness="0" BorderBrush="{x:Null}" Cursor="Hand" MouseEnter="AgrandoCruz" MouseLeave="AchicoCruz"/>
+        <Rectangle Fill="#FF191919" HorizontalAlignment="Left" Height="438" Margin="0,42,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="422" Opacity="0.6"/>
+        <Button x:Name="biseccion" Content="Bisección" HorizontalAlignment="Left" Margin="12,82,0,0" VerticalAlignment="Top" Width="400" Height="42" Background="White" FontFamily="Nirmala UI" FontSize="22" BorderThickness="0" Cursor="Hand" Click="biseccion_Click" MouseEnter="Grey_Biseccion" MouseLeave="White_Biseccion"/>
+        <Button x:Name="regla_falsa" Content="Regla Falsa" HorizontalAlignment="Left" Margin="12,144,0,0" VerticalAlignment="Top" Width="400" Height="42" Background="White" FontFamily="Nirmala UI" FontSize="22" BorderThickness="0" Cursor="Hand" Click="reglaFalsa_Click" MouseEnter="ReglaFalsa_Grey" MouseLeave="ReglaFalsa_White"/>
+        <Label Content="Analisis Númerico" HorizontalAlignment="Left" Margin="44,0,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="20"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="12,7,0,0" VerticalAlignment="Top" Width="32" Source="/Images/hashtag.png" RenderTransformOrigin="0.641,0.38"/>
+
+    </Grid>
+
+
+</Window>
+

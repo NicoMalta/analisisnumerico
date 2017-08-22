@@ -16,9 +16,10 @@ namespace ClassLibrary2
 
     public class ResultadoRaiz : Configuraciones
     {
-        public int valorRaiz { get; set; }
-        public int XD { get; set; }
-        public int XI { get; set; }
+        public double valorRaiz { get; set; }
+        public double XD { get; set; }
+        public double XI { get; set; }
+        public double error;
 
         public ResultadoRaiz( int iteraciones, int tolerancia)
         {
@@ -32,14 +33,15 @@ namespace ClassLibrary2
 
     public class Metodos
     {
+        public double error { get; set; }
+
         public  ResultadoRaiz Biseccion(ResultadoRaiz nuevoResultado)
         {
             
-            int xant = 0;
+            double xant = 0;
             int c = 0;
-            int xr;
+            double xr;
             bool band = false;
-            decimal error;
             if ((funcion(nuevoResultado.XI) * funcion (nuevoResultado.XD) ) < 0)
             {
                 xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
@@ -80,17 +82,18 @@ namespace ClassLibrary2
                     nuevoResultado.valorRaiz = nuevoResultado.XD;
                 }
             }
+            nuevoResultado.error = error;
             return nuevoResultado;
         }
 
-        public double funcion(int x)
+        public double funcion(double x)
         {
             double resultado = 0;
             resultado = Math.Pow((x - 3), 2) - 1;
             return resultado;
         }
 
-        public double funcion(int x, int y)
+        public double funcion(double x, double y)
         {
             double resultado = 0;
             return resultado;
@@ -104,15 +107,53 @@ namespace ClassLibrary2
 
         public ResultadoRaiz ReglaFalsa(ResultadoRaiz nuevoResultado)
         {
-            Function f = new Function("f(x) = x ^ 2");
+            double xant = 0;
+            int c = 0;
+            double xr;
+            bool band = false;
+            if ((funcion(nuevoResultado.XI) * funcion(nuevoResultado.XD)) < 0)
+            {
+                xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
+                error = Math.Abs((xr - xant) / xr);
 
-            Argument a1 = new Argument("X =2");
 
-            Expression R = new Expression("f(x)", f, a1);
+                while ((Math.Abs(funcion(xr)) >= nuevoResultado.Tolerancia) || (error < nuevoResultado.Tolerancia) || (c >= nuevoResultado.iteraciones))
+                {
+                    c++;
+                    xr = nuevoResultado.XD - ((funcion(nuevoResultado.XI) - (nuevoResultado.XI - nuevoResultado.XD)) / ((funcion(nuevoResultado.XI) - (funcion(nuevoResultado.XD)))));
+                    error = Math.Abs((xr - xant) / xr);
+                    if ((funcion(nuevoResultado.XI) * funcion(nuevoResultado.XD)) < 0)
+                    {
+                        nuevoResultado.XD = xr;
+                    }
+                    else
+                    {
+                        nuevoResultado.XI = xr;
+                    }
+                    xant = xr;
+                    band = true;
+                }
 
-            var a = R.calculate();
-            
+                if (band == false)
+                {
+                    nuevoResultado.valorRaiz = xr;
+                }
+
+            }
+            else
+            {
+                if (funcion(nuevoResultado.XI) == 0)
+                {
+                    nuevoResultado.valorRaiz = nuevoResultado.XI;
+                }
+                else
+                {
+                    nuevoResultado.valorRaiz = nuevoResultado.XD;
+                }
+            }
             return nuevoResultado;
+
+        
         }
     }
 }
