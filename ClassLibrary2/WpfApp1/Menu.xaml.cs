@@ -93,12 +93,17 @@ namespace WpfApp1
 
         private void Grey_Biseccion(object sender, MouseEventArgs e)
         {
-           // biseccion.Background = Brushes.DarkGray;
+            var bc = new BrushConverter();
+            biseccion.Background = (Brush)bc.ConvertFrom("#FF343131");
         }
 
         private void White_Biseccion(object sender, MouseEventArgs e)
         {
-            //biseccion.Background = Brushes.White;
+            if (ContadorClick_biseccion == false)
+            {
+                var bc = new BrushConverter();
+                biseccion.Background = (Brush)bc.ConvertFrom("#FF232323");
+            }
         }
 
         private void reglaFalsa_Click(object sender, RoutedEventArgs e)
@@ -124,12 +129,18 @@ namespace WpfApp1
 
         private void ReglaFalsa_Grey(object sender, MouseEventArgs e)
         {
-           // regla_falsa.Background = Brushes.DarkGray;
+            var bc = new BrushConverter();
+            regla_falsa.Background = (Brush)bc.ConvertFrom("#FF343131");
         }
 
         private void ReglaFalsa_White(object sender, MouseEventArgs e)
         {
-          //  regla_falsa.Background = Brushes.White;
+            if (ContadorClick_reglafalsa == false)
+            {
+                var bc = new BrushConverter();
+                regla_falsa.Background = (Brush)bc.ConvertFrom("#FF232323");
+            }
+
         }
 
         private void Xi_textbox_MouseEnter(object sender, MouseEventArgs e)
