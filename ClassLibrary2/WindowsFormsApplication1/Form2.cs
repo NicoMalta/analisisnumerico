@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ResultadoRaiz resultado = new ResultadoRaiz(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
+            ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
             resultado.XI = Convert.ToInt32(textBox3.Text);
             resultado.XD = Convert.ToInt32(textBox4.Text);
 

@@ -15,3 +15,4 @@ C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\
 C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\ClassLibrary2\obj\Debug\AnalisisNumerico.csprojResolveAssemblyReference.cache
 C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
 C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
+D:\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\MathParser.org-mXparser.Net452.dll

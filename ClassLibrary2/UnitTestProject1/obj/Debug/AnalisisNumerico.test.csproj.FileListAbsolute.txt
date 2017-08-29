@@ -1,0 +1,10 @@
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\bin\Debug\ClassLibrary2.dll
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\bin\Debug\MathParser.org-mXparser.Net452.dll
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\bin\Debug\ClassLibrary2.pdb
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\obj\Debug\AnalisisNumerico.test.csprojResolveAssemblyReference.cache
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\analisisnumerico\ClassLibrary2\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

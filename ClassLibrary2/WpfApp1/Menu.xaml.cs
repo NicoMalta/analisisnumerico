@@ -165,11 +165,12 @@ namespace WpfApp1
 
         private void hacerclick(object sender, RoutedEventArgs e)
         {
-            ResultadoRaiz resultado = new ResultadoRaiz(Convert.ToInt32(iteraciones_textbox_biseccion.Text), Convert.ToInt32(tolerancia_textbox_biseccion.Text));
+            ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_biseccion.Text), Convert.ToInt32(tolerancia_textbox_biseccion.Text));
             resultado.XI = Convert.ToInt32(Xi_textbox_biseccion.Text);
             resultado.XD = Convert.ToInt32(Xd_textbox_biseccion.Text);
             Function f = new Function("f(x) = " + fx_biseccion_textbox.Text);
-
+          
+            
             var Metodos = new Metodos();
 
             Metodos.Biseccion(resultado, f);
@@ -217,7 +218,7 @@ namespace WpfApp1
 
         private void ResolverRF(object sender, RoutedEventArgs e)
         {
-            ResultadoRaiz resultado = new ResultadoRaiz(Convert.ToInt32(iteraciones_textbox_reglafalsa.Text), Convert.ToInt32(tolerancia_textbox_reglafalsa.Text));
+            ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_reglafalsa.Text), Convert.ToInt32(tolerancia_textbox_reglafalsa.Text));
             resultado.XI = Convert.ToInt32(Xi_textbox_reglafalsa.Text);
             resultado.XD = Convert.ToInt32(Xd_textbox_reglafalsa.Text);
             Function f = new Function("f(x) = " + fx_biseccion_textbox.Text);
