@@ -217,11 +217,13 @@ namespace ClassLibrary2
                         Fxiniderivada = new Expression("f(x)", f, Xiniderivada);
                         Derivada = (Fxiniderivada.calculate() - Fxini.calculate()) / 0.0001;
                         xr = nuevoResultado.Xini - (Fxini.calculate() / Derivada);
+                        nuevoResultado.error = Math.Abs(xr - Xant) / xr;
                         Xr = new Argument(" x = " + xr);
                         c++;
                     }
 
                     nuevoResultado.valorRaiz = nuevoResultado.Xini;
+                    nuevoResultado.error = Math.Abs(nuevoResultado.error);
                 }
 
             }

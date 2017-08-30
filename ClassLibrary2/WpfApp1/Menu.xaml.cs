@@ -24,6 +24,7 @@ namespace WpfApp1
     {
         public bool ContadorClick_biseccion { get; set; }
         public bool ContadorClick_reglafalsa { get; set; }
+        public bool ContadorClick_tangente { get; set; }
 
         public MainWindow()
         {
@@ -60,6 +61,7 @@ namespace WpfApp1
             //a.Show();
             //this.Close();
             ContadorClick_reglafalsa = false;
+            ContadorClick_tangente = false;
             var bc = new BrushConverter();
             if (ContadorClick_biseccion == false)
             {
@@ -67,7 +69,9 @@ namespace WpfApp1
                 biseccion.Background = (Brush)bc.ConvertFrom("#FF343131");
                 grid2.Visibility = Visibility.Visible;
                 grid3.Visibility = Visibility.Hidden;
+                grid4.Visibility = Visibility.Hidden;
                 regla_falsa.Background = (Brush)bc.ConvertFrom("#FF232323");
+                Tangente_button.Background = (Brush)bc.ConvertFrom("#FF232323");
                 ContadorClick_biseccion = true;
             }
             else
@@ -110,12 +114,16 @@ namespace WpfApp1
         {
             var bc = new BrushConverter();
             ContadorClick_biseccion = false;
+            ContadorClick_tangente = false;
             if (ContadorClick_reglafalsa == false)
             {
                 regla_falsa.Background = (Brush)bc.ConvertFrom("#FF343131");
+               
                 grid3.Visibility = Visibility.Visible;
                 grid2.Visibility = Visibility.Hidden;
+                grid4.Visibility = Visibility.Hidden;
                 biseccion.Background = (Brush)bc.ConvertFrom("#FF232323");
+                Tangente_button.Background = (Brush)bc.ConvertFrom("#FF232323");
                 ContadorClick_reglafalsa = true;
             }
             else
@@ -166,8 +174,8 @@ namespace WpfApp1
         private void hacerclick(object sender, RoutedEventArgs e)
         {
             ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_biseccion.Text), Convert.ToInt32(tolerancia_textbox_biseccion.Text));
-            resultado.XI = Convert.ToInt32(Xi_textbox_biseccion.Text);
-            resultado.XD = Convert.ToInt32(Xd_textbox_biseccion.Text);
+            resultado.XI = Convert.ToDouble(Xi_textbox_biseccion.Text);
+            resultado.XD = Convert.ToDouble(Xd_textbox_biseccion.Text);
             Function f = new Function("f(x) = " + fx_biseccion_textbox.Text);
           
             
@@ -219,8 +227,8 @@ namespace WpfApp1
         private void ResolverRF(object sender, RoutedEventArgs e)
         {
             ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_reglafalsa.Text), Convert.ToInt32(tolerancia_textbox_reglafalsa.Text));
-            resultado.XI = Convert.ToInt32(Xi_textbox_reglafalsa.Text);
-            resultado.XD = Convert.ToInt32(Xd_textbox_reglafalsa.Text);
+            resultado.XI = Convert.ToDouble(Xi_textbox_reglafalsa.Text);
+            resultado.XD = Convert.ToDouble(Xd_textbox_reglafalsa.Text);
             Function f = new Function("f(x) = " + fx_reglafalsa_textbox.Text);
             var Metodos = new Metodos();
 
@@ -235,6 +243,61 @@ namespace WpfApp1
         private void fx_reglafalsa_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             fx_reglafalsa_textbox.Text = "";
+        }
+
+        private void Grey_Tangente(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            Tangente_button.Background = (Brush)bc.ConvertFrom("#FF343131");
+        }
+
+        private void White_Tangente(object sender, MouseEventArgs e)
+        {
+            if (ContadorClick_tangente == false)
+            {
+                var bc = new BrushConverter();
+                Tangente_button.Background = (Brush)bc.ConvertFrom("#FF232323");
+            }
+        }
+
+        private void Resolver_Tangente_Click(object sender, RoutedEventArgs e)
+        {
+            ResultadoRaizAbiertos resultado = new ResultadoRaizAbiertos(Convert.ToInt32(iteraciones_tan_textbox.Text), Convert.ToInt32(error_tan_textbox.Text));
+            resultado.Xini = Convert.ToDouble(xini_textbox.Text);
+
+            Function f = new Function("f(x) = " + fx_tan_textbox.Text);
+            var Metodos = new Metodos();
+
+            Metodos.Tangente(resultado, f);
+
+            Resultado_label_tan.Content = "Raíz: " + resultado.valorRaiz;
+            ResultadoError_label_tan.Content = "Error: " + resultado.error;
+            Resultado_label_tan.Visibility = Visibility.Visible;
+            ResultadoError_label_tan.Visibility = Visibility.Visible;
+        }
+
+        private void Tangente_button_Click(object sender, RoutedEventArgs e)
+        {
+            var bc = new BrushConverter();
+            ContadorClick_biseccion = false;
+            ContadorClick_reglafalsa = false;
+
+            if (ContadorClick_tangente == false)
+            {
+                Tangente_button.Background = (Brush)bc.ConvertFrom("#FF343131");
+                grid4.Visibility = Visibility.Visible;
+                grid2.Visibility = Visibility.Hidden;
+                grid3.Visibility = Visibility.Hidden;
+                biseccion.Background = (Brush)bc.ConvertFrom("#FF232323");
+                regla_falsa.Background = (Brush)bc.ConvertFrom("#FF232323");
+                ContadorClick_tangente = true;
+            }
+            else
+            {
+                Tangente_button.Background = (Brush)bc.ConvertFrom("#FF232323");
+                grid4.Visibility = Visibility.Hidden;
+                ContadorClick_tangente = false;
+            }
         }
     }
 }
