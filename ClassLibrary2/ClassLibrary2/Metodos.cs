@@ -201,7 +201,7 @@ namespace ClassLibrary2
                 }
                 else
                 {
-                    double xr = (nuevoResultado.Xini - Fxini.calculate()) / Fxiniderivada.calculate();
+                    double xr = nuevoResultado.Xini - (Fxini.calculate() / Derivada);
                     Xr = new Argument(" x = " + xr);
                     nuevoResultado.error = Math.Abs(xr - Xant) / xr;
 
@@ -210,14 +210,21 @@ namespace ClassLibrary2
                         nuevoResultado.error = Math.Abs(xr - Xant) / xr;
                         Xant = xr;
                         nuevoResultado.Xini = xr;
-                        Xini = new Argument(" x = " + nuevoResultado.Xini);
-                        xr = (nuevoResultado.Xini - Fxini.calculate()) / Fxiniderivada.calculate();
+                        Xini = new Argument(" x = " + nuevoResultado.Xini.ToString(CultureInfo.InvariantCulture));
+                        Fxini = new Expression("f(x)", f, Xini);
+                        aux = nuevoResultado.Xini + 0.0001;
+                        Xiniderivada = new Argument(" x = " + aux.ToString().Replace(',', '.'));
+                        Fxiniderivada = new Expression("f(x)", f, Xiniderivada);
+                        Derivada = (Fxiniderivada.calculate() - Fxini.calculate()) / 0.0001;
+                        xr = nuevoResultado.Xini - (Fxini.calculate() / Derivada);
                         Xr = new Argument(" x = " + xr);
+                        c++;
                     }
+
+                    nuevoResultado.valorRaiz = nuevoResultado.Xini;
                 }
 
             }
-
             return nuevoResultado;
         }
     }

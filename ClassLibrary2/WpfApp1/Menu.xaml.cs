@@ -221,7 +221,7 @@ namespace WpfApp1
             ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_reglafalsa.Text), Convert.ToInt32(tolerancia_textbox_reglafalsa.Text));
             resultado.XI = Convert.ToInt32(Xi_textbox_reglafalsa.Text);
             resultado.XD = Convert.ToInt32(Xd_textbox_reglafalsa.Text);
-            Function f = new Function("f(x) = " + fx_biseccion_textbox.Text);
+            Function f = new Function("f(x) = " + fx_reglafalsa_textbox.Text);
             var Metodos = new Metodos();
 
             Metodos.ReglaFalsa(resultado, f);

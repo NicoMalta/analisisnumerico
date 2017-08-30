@@ -54,7 +54,6 @@ C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Micr
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.resources.dll
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.GraphModel.resources.dll
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.Windows.Design.Interaction.dll
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\en\Microsoft.Windows.Design.Interaction.resources.dll
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.Windows.Design.Interaction.resources.dll
@@ -118,3 +117,13 @@ D:\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\Menu.baml
 D:\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.g.resources
 D:\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
 D:\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
