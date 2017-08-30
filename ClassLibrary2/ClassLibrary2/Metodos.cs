@@ -52,9 +52,9 @@ namespace ClassLibrary2
 
         public  ResultadoRaizCerrados Biseccion(ResultadoRaizCerrados nuevoResultado, Function f)
         {
-            
-            Argument Xi = new Argument(" x = " + nuevoResultado.XI);
-            Argument Xd = new Argument(" x = " + nuevoResultado.XD);
+
+            Argument Xi = new Argument(" x = " + nuevoResultado.XI.ToString(CultureInfo.InvariantCulture));
+            Argument Xd = new Argument(" x = " + nuevoResultado.XD.ToString(CultureInfo.InvariantCulture));
             Argument Xr = new Argument(" x = 0 ");
             Expression Fxi = new Expression("f(x)", f, Xi);
             Expression Fxd = new Expression("f(x)", f, Xd);
@@ -115,8 +115,8 @@ namespace ClassLibrary2
         public ResultadoRaizCerrados ReglaFalsa(ResultadoRaizCerrados nuevoResultado, Function f)
         {
 
-            Argument Xi = new Argument(" x = " + nuevoResultado.XI);
-            Argument Xd = new Argument(" x = " + nuevoResultado.XD);
+            Argument Xi = new Argument(" x = " + nuevoResultado.XI.ToString(CultureInfo.InvariantCulture));
+            Argument Xd = new Argument(" x = " + nuevoResultado.XD.ToString(CultureInfo.InvariantCulture));
             Argument Xr = new Argument(" x = 0 ");
             Expression Fxi = new Expression("f(x)", f, Xi);
             Expression Fxd = new Expression("f(x)", f, Xd);

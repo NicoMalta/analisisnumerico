@@ -15,6 +15,7 @@
         <Button x:Name="biseccion" Content="Bisección" HorizontalAlignment="Left" Margin="0,88,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" Click="biseccion_Click" MouseEnter="Grey_Biseccion" MouseLeave="White_Biseccion" Foreground="White"/>
         <Button x:Name="regla_falsa" Content="Regla Falsa" HorizontalAlignment="Left" Margin="0,130,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" Click="reglaFalsa_Click" MouseEnter="ReglaFalsa_Grey" MouseLeave="ReglaFalsa_White" Foreground="White"/>
         <Button x:Name="Tangente_button" Content="Tangente" HorizontalAlignment="Left" Margin="0,208,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" MouseEnter="Grey_Tangente" MouseLeave="White_Tangente" Foreground="White" Click="Tangente_button_Click"/>
+        <Button x:Name="Secante_button" Content="Secante" HorizontalAlignment="Left" Margin="0,250,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" MouseEnter="Grey_Secante" MouseLeave="White_Secante" Foreground="White" Click="Secante_button_Click"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="469" Margin="286,41,0,-6" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5"
 >
             <Border.RenderTransform>
@@ -60,15 +61,34 @@
                     <DropShadowEffect/>
                 </Rectangle.Effect>
             </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="175" Stroke="#FF838383" StrokeThickness="10" VerticalAlignment="Top" Width="438" Margin="300,197,0,0" Opacity="0.5" RadiusY="2" RadiusX="2" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.Fill>
+                    <RadialGradientBrush Opacity="0.3" Center="0.5,0.5" GradientOrigin="0.5,0.5">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="-1" ScaleX="-1"/>
+                                <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="337.38" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFFFFCFC" Offset="0"/>
+                        <GradientStop Color="#FF515151" Offset="1"/>
+                    </RadialGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
             <Label Content="Bisección" HorizontalAlignment="Left" Margin="663,10,0,0" VerticalAlignment="Top" Width="121" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="XI_biseccion" Content="XI:" HorizontalAlignment="Left" Margin="69,146,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold" RenderTransformOrigin="0.743,2.603"/>
-            <Label x:Name="XD_biseccion" Content="XD: " HorizontalAlignment="Left" Margin="69,190,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.755,0.385"/>
-            <Label x:Name="Iteraciones_biseccion" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="69,234,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.512,1.513"/>
-            <Label x:Name="Tolerancia_biseccion" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="69,278,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="Xi_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="139,152,0,0" TextWrapping="Wrap" Text="Ingresar xi" VerticalAlignment="Top" Width="179" MouseEnter="Xi_textbox_MouseEnter" PreviewMouseDown="Xi_textbox_PreviewMouseDown" FontSize="20" RenderTransformOrigin="0.492,3.133" />
-            <TextBox x:Name="Xd_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="140,196,0,0" TextWrapping="Wrap" Text="Ingresar xd" VerticalAlignment="Top" Width="178" MouseEnter="Xd_textbox_MouseEnter" PreviewMouseDown="Xd_textbox_PreviewMouseDown" FontSize="20" />
-            <TextBox x:Name="iteraciones_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="242,240,0,0" TextWrapping="Wrap" Text="Nº de iteraciones" VerticalAlignment="Top" Width="169" MouseEnter="iter_textbox_MouseEnter" PreviewMouseDown="iteraciones_textbox_PreviewMouseDown" RenderTransformOrigin="0.595,0.978" FontSize="20" />
-            <TextBox x:Name="tolerancia_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="242,284,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" TextChanged="tolerancia_textbox_TextChanged" PreviewMouseDown="tolerancia_textbox_PreviewMouseDown" FontSize="20" />
+            <Label x:Name="XI_biseccion" Content="XI:" HorizontalAlignment="Left" Margin="69,80,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold" RenderTransformOrigin="0.743,2.603"/>
+            <Label x:Name="XD_biseccion" Content="XD: " HorizontalAlignment="Left" Margin="69,159,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.755,0.385"/>
+            <Label x:Name="Iteraciones_biseccion" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="69,241,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.512,1.513"/>
+            <Label x:Name="Tolerancia_biseccion" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="69,320,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="Xi_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="75,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"  FontSize="20" RenderTransformOrigin="0.492,3.133" />
+            <TextBox x:Name="Xd_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="75,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"  FontSize="20" />
+            <TextBox x:Name="iteraciones_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="75,285,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="145"  RenderTransformOrigin="0.595,0.978" FontSize="20" />
+            <TextBox x:Name="tolerancia_textbox_biseccion" HorizontalAlignment="Left" Height="30" Margin="75,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"  RenderTransformOrigin="0.45,3.032" FontSize="20" />
             <Button Content="Resolver" HorizontalAlignment="Left" Margin="628,391,0,0"  VerticalAlignment="Top" Width="110" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="18" BorderThickness="0" Click="hacerclick" RenderTransformOrigin="1.164,0.5">
                 <Button.Effect>
                     <DropShadowEffect Color="White" Opacity="0.5"/>
@@ -80,10 +100,11 @@
                     </RadialGradientBrush>
                 </Button.Background>
             </Button>
-            <Label x:Name="Resultado_label_biseccion" Content="Raíz:" HorizontalAlignment="Left" Margin="75,348,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
-            <Label x:Name="ResultadoError_label_biseccion" Content="Error:" HorizontalAlignment="Left" Margin="75,385,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
-            <Label Content="F(x): " HorizontalAlignment="Left" Margin="68,85,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="fx_biseccion_textbox" HorizontalAlignment="Left" Height="30" Margin="140,93,0,0" TextWrapping="Wrap" Text="Ingresar Función" VerticalAlignment="Top" Width="271" FontSize="20" PreviewMouseDown="fx_biseccion_textbox_PreviewMouseDown"/>
+            <Label x:Name="Resultado_label_biseccion" Content="Raíz:" HorizontalAlignment="Left" Margin="330,241,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
+            <Label x:Name="ResultadoError_label_biseccion" Content="Error:" HorizontalAlignment="Left" Margin="330,293,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
+            <Label Content="F(x): " HorizontalAlignment="Left" Margin="300,77,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="fx_biseccion_textbox" HorizontalAlignment="Left" Height="30" Margin="300,124,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="272" FontSize="20"/>
+            <Label x:Name="resultados_label_Copy1" Content="Resultados" HorizontalAlignment="Left" Margin="604,158,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449"/>
         </Grid>
 
         <Grid x:Name="grid3" HorizontalAlignment="Left" Height="457" Margin="292,47,0,0" VerticalAlignment="Top" Width="784" Visibility="Hidden">
@@ -106,15 +127,34 @@
                     <DropShadowEffect/>
                 </Rectangle.Effect>
             </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="174" Stroke="#FF838383" StrokeThickness="10" VerticalAlignment="Top" Width="438" Margin="300,196,0,0" Opacity="0.5" RadiusY="2" RadiusX="2" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.Fill>
+                    <RadialGradientBrush Opacity="0.3" Center="0.5,0.5" GradientOrigin="0.5,0.5">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="-1" ScaleX="-1"/>
+                                <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="337.38" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFFFFCFC" Offset="0"/>
+                        <GradientStop Color="#FF515151" Offset="1"/>
+                    </RadialGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
             <Label Content="Regla Falsa" HorizontalAlignment="Left" Margin="640,8,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="XI_reglafalsa" Content="XI:" HorizontalAlignment="Left" Margin="75,160,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold"/>
-            <Label x:Name="XD_reglafalsa" Content="XD: " HorizontalAlignment="Left" Margin="75,204,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.632,2.936"/>
-            <Label x:Name="Iteraciones_reglafalsa" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="69,248,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="Tolerancia_reglafalsa" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="69,292,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="Xi_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="139,160,0,0" TextWrapping="Wrap" Text="Ingresar xi" VerticalAlignment="Top" Width="179" MouseEnter="Xi_textbox_MouseEnter" PreviewMouseDown="Xi_textbox_PreviewMouseDown" FontSize="20" />
-            <TextBox x:Name="Xd_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="140,204,0,0" TextWrapping="Wrap" Text="Ingresar xd" VerticalAlignment="Top" Width="178" MouseEnter="Xd_textbox_MouseEnter" PreviewMouseDown="Xd_textbox_PreviewMouseDown" FontSize="20" />
-            <TextBox x:Name="iteraciones_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="242,254,0,0" TextWrapping="Wrap" Text="Nº de iteraciones" VerticalAlignment="Top" Width="169" MouseEnter="iter_textbox_MouseEnter" PreviewMouseDown="iteraciones_textbox_PreviewMouseDown" RenderTransformOrigin="0.595,0.978" FontSize="20" />
-            <TextBox x:Name="tolerancia_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="242,292,0,0" TextWrapping="Wrap" Text="Error" VerticalAlignment="Top" Width="100" MouseEnter="error_textbox_MouseEnter" RenderTransformOrigin="0.45,3.032" TextChanged="tolerancia_textbox_TextChanged" PreviewMouseDown="tolerancia_textbox_PreviewMouseDown" FontSize="20" />
+            <Label x:Name="XI_reglafalsa" Content="XI:" HorizontalAlignment="Left" Margin="75,74,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontWeight="Bold"/>
+            <Label x:Name="XD_reglafalsa" Content="XD: " HorizontalAlignment="Left" Margin="75,153,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.632,2.936"/>
+            <Label x:Name="Iteraciones_reglafalsa" Content="ITERACIONES: " HorizontalAlignment="Left" Margin="75,232,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="Tolerancia_reglafalsa" Content="TOLERANCIA:" HorizontalAlignment="Left" Margin="75,311,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="Xi_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="75,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"  FontSize="20" />
+            <TextBox x:Name="Xd_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="75,197,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="151"  FontSize="20" />
+            <TextBox x:Name="iteraciones_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="75,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"  RenderTransformOrigin="0.595,0.978" FontSize="20" />
+            <TextBox x:Name="tolerancia_textbox_reglafalsa" HorizontalAlignment="Left" Height="30" Margin="75,355,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="151"  RenderTransformOrigin="0.45,3.032"  FontSize="20" />
             <Button Content="Resolver" HorizontalAlignment="Left" Margin="628,391,0,0"  VerticalAlignment="Top" Width="110" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="18" BorderThickness="0" Click="ResolverRF" RenderTransformOrigin="1.164,0.5">
                 <Button.Effect>
                     <DropShadowEffect Color="White" Opacity="0.5"/>
@@ -126,10 +166,11 @@
                     </RadialGradientBrush>
                 </Button.Background>
             </Button>
-            <Label x:Name="Resultado_label_reglafalsa" Content="Raíz:" HorizontalAlignment="Left" Margin="75,348,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
-            <Label x:Name="ResultadoError_label_reglafalsa" Content="Error:" HorizontalAlignment="Left" Margin="75,385,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
-            <Label Content="F(x): " HorizontalAlignment="Left" Margin="68,85,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="fx_reglafalsa_textbox" HorizontalAlignment="Left" Height="30" Margin="140,92,0,0" TextWrapping="Wrap" Text="Ingresar Función" VerticalAlignment="Top" Width="271" FontSize="20" PreviewMouseDown="fx_reglafalsa_textbox_PreviewMouseDown"/>
+            <Label x:Name="Resultado_label_reglafalsa" Content="Raíz:" HorizontalAlignment="Left" Margin="334,232,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
+            <Label x:Name="ResultadoError_label_reglafalsa" Content="Error:" HorizontalAlignment="Left" Margin="334,284,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
+            <Label Content="F(x): " HorizontalAlignment="Left" Margin="330,74,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.224,0.726"/>
+            <TextBox x:Name="fx_reglafalsa_textbox" HorizontalAlignment="Left" Height="30" Margin="330,118,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="271" FontSize="20" />
+            <Label x:Name="resultados_label_Copy2" Content="Resultados" HorizontalAlignment="Left" Margin="604,158,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449"/>
         </Grid>
         <Grid x:Name="grid4" HorizontalAlignment="Left" Height="462" Margin="287,42,0,0" VerticalAlignment="Top" Width="789" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Left" Height="400" Stroke="#FF838383" StrokeThickness="10" VerticalAlignment="Top" Width="740" Margin="34,47,0,0" Opacity="0.5" RadiusY="2" RadiusX="2" RenderTransformOrigin="0.5,0.5">
@@ -193,6 +234,69 @@
             <Label x:Name="Resultado_label_tan" Content="Raíz:" HorizontalAlignment="Left" Margin="371,295,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
             <Label x:Name="ResultadoError_label_tan" Content="Error:" HorizontalAlignment="Left" Margin="371,350,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.619,1.514" Visibility="Hidden"/>
             <Label x:Name="resultados_label" Content="Resultados" HorizontalAlignment="Left" Margin="607,212,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449"/>
+        </Grid>
+        <Grid x:Name="grid5" HorizontalAlignment="Left" Height="457" Margin="292,47,0,0" VerticalAlignment="Top" Width="784" Visibility="Hidden">
+            <Rectangle HorizontalAlignment="Left" Height="400" Stroke="#FF838383" StrokeThickness="10" VerticalAlignment="Top" Width="740" Margin="34,47,0,0" Opacity="0.5" RadiusY="2" RadiusX="2" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.Fill>
+                    <RadialGradientBrush Opacity="0.3" Center="0.5,0.5" GradientOrigin="0.5,0.5">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="-1" ScaleX="-1"/>
+                                <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="337.38" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFFFFCFC" Offset="0"/>
+                        <GradientStop Color="#FF515151" Offset="1"/>
+                    </RadialGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="170" Stroke="#FF838383" StrokeThickness="10" VerticalAlignment="Top" Width="394" Margin="347,251,0,0" Opacity="0.5" RadiusY="2" RadiusX="2" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.Fill>
+                    <RadialGradientBrush Opacity="0.3" Center="0.5,0.5" GradientOrigin="0.5,0.5">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="-1" ScaleX="-1"/>
+                                <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="337.38" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFFFFCFC" Offset="0"/>
+                        <GradientStop Color="#FF515151" Offset="1"/>
+                    </RadialGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Button x:Name="Resolver_Secante" Content="Resolver" HorizontalAlignment="Left" Margin="84,391,0,0"  VerticalAlignment="Top" Width="110" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="18" BorderThickness="0" RenderTransformOrigin="1.164,0.5" Click="Resolver_Tangente_Click">
+                <Button.Effect>
+                    <DropShadowEffect Color="White" Opacity="0.5"/>
+                </Button.Effect>
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="LightGray" Offset="0.997"/>
+                        <GradientStop Color="White"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label x:Name="Iteraciones_secante_label" HorizontalAlignment="Left" Margin="79,186,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="ITERACIONES:"/>
+            <Label x:Name="Error_secante_label" Content="ERROR: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Margin="79,278,0,0"/>
+            <Label x:Name="Xini_secante_label" HorizontalAlignment="Left" Margin="79,94,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="X INICIAL:"/>
+            <Label Content="Secante" HorizontalAlignment="Left" Margin="640,8,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="xini_sec_textbox" HorizontalAlignment="Left" Height="43" Margin="79,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
+            <TextBox x:Name="iteraciones_sec_textbox" HorizontalAlignment="Left" Height="43" Margin="79,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
+            <TextBox x:Name="error_sec_textbox" HorizontalAlignment="Left" Height="43" Margin="79,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
+            <Label x:Name="fx_sec_label" HorizontalAlignment="Left" Margin="371,94,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="F(x): "/>
+            <TextBox x:Name="fx_tan_textbox_Copy" HorizontalAlignment="Left" Height="43" Margin="371,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
+            <Label x:Name="Resultado_label_tan_Copy" Content="Raíz:" HorizontalAlignment="Left" Margin="371,295,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
+            <Label x:Name="ResultadoError_label_tan_Copy" Content="Error:" HorizontalAlignment="Left" Margin="371,350,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.619,1.514" Visibility="Hidden"/>
+            <Label x:Name="resultados_label_Copy" Content="Resultados" HorizontalAlignment="Left" Margin="607,212,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449"/>
         </Grid>
     </Grid>
 

@@ -25,22 +25,11 @@ namespace WpfApp1
         public bool ContadorClick_biseccion { get; set; }
         public bool ContadorClick_reglafalsa { get; set; }
         public bool ContadorClick_tangente { get; set; }
+        public bool ContadorClick_Secante { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-
-        private void entro(object sender, MouseEventArgs e)
-        {
-           //    label_biseccion.FontStyle = FontStyles.Italic;
-        }
-
-        private void salgo(object sender, MouseEventArgs e)
-        {
-
-           // label_biseccion.FontStyle = FontStyles.Normal;
         }
 
 
@@ -50,11 +39,6 @@ namespace WpfApp1
             this.Close();
         }
 
-        private void Minimize_click(object sender, RoutedEventArgs e)
-        {
-           
-    }
-
         private void biseccion_Click(object sender, RoutedEventArgs e)
         {
             //Window1 a = new Window1();
@@ -62,6 +46,7 @@ namespace WpfApp1
             //this.Close();
             ContadorClick_reglafalsa = false;
             ContadorClick_tangente = false;
+            ContadorClick_Secante = false;
             var bc = new BrushConverter();
             if (ContadorClick_biseccion == false)
             {
@@ -70,6 +55,7 @@ namespace WpfApp1
                 grid2.Visibility = Visibility.Visible;
                 grid3.Visibility = Visibility.Hidden;
                 grid4.Visibility = Visibility.Hidden;
+                grid5.Visibility = Visibility.Hidden;
                 regla_falsa.Background = (Brush)bc.ConvertFrom("#FF232323");
                 Tangente_button.Background = (Brush)bc.ConvertFrom("#FF232323");
                 ContadorClick_biseccion = true;
@@ -115,6 +101,8 @@ namespace WpfApp1
             var bc = new BrushConverter();
             ContadorClick_biseccion = false;
             ContadorClick_tangente = false;
+            ContadorClick_Secante = false;
+
             if (ContadorClick_reglafalsa == false)
             {
                 regla_falsa.Background = (Brush)bc.ConvertFrom("#FF343131");
@@ -122,6 +110,7 @@ namespace WpfApp1
                 grid3.Visibility = Visibility.Visible;
                 grid2.Visibility = Visibility.Hidden;
                 grid4.Visibility = Visibility.Hidden;
+                grid5.Visibility = Visibility.Hidden;
                 biseccion.Background = (Brush)bc.ConvertFrom("#FF232323");
                 Tangente_button.Background = (Brush)bc.ConvertFrom("#FF232323");
                 ContadorClick_reglafalsa = true;
@@ -151,26 +140,6 @@ namespace WpfApp1
 
         }
 
-        private void Xi_textbox_MouseEnter(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Xd_textbox_MouseEnter(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void iter_textbox_MouseEnter(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void error_textbox_MouseEnter(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void hacerclick(object sender, RoutedEventArgs e)
         {
             ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_biseccion.Text), Convert.ToInt32(tolerancia_textbox_biseccion.Text));
@@ -189,40 +158,7 @@ namespace WpfApp1
             ResultadoError_label_biseccion.Visibility = Visibility.Visible;
         }
 
-        private void tolerancia_textbox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
-        }
-
-        private void fx_biseccion_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            fx_biseccion_textbox.Text = "";
-        }
-
-
-        private void Xi_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Xi_textbox_biseccion.Text = "";
-            Xi_textbox_reglafalsa.Text = "";
-        }
-
-        private void Xd_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Xd_textbox_biseccion.Text = "";
-            Xd_textbox_reglafalsa.Text = "";
-        }
-
-        private void iteraciones_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            iteraciones_textbox_biseccion.Text = "";
-            iteraciones_textbox_reglafalsa.Text = "";
-        }
-
-        private void tolerancia_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            tolerancia_textbox_biseccion.Text = "";
-            tolerancia_textbox_reglafalsa.Text = "";
-        }
 
         private void ResolverRF(object sender, RoutedEventArgs e)
         {
@@ -240,10 +176,6 @@ namespace WpfApp1
             ResultadoError_label_reglafalsa.Visibility = Visibility.Visible;
         }
 
-        private void fx_reglafalsa_textbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            fx_reglafalsa_textbox.Text = "";
-        }
 
         private void Grey_Tangente(object sender, MouseEventArgs e)
         {
@@ -281,6 +213,7 @@ namespace WpfApp1
             var bc = new BrushConverter();
             ContadorClick_biseccion = false;
             ContadorClick_reglafalsa = false;
+            ContadorClick_Secante = false;
 
             if (ContadorClick_tangente == false)
             {
@@ -288,6 +221,7 @@ namespace WpfApp1
                 grid4.Visibility = Visibility.Visible;
                 grid2.Visibility = Visibility.Hidden;
                 grid3.Visibility = Visibility.Hidden;
+                grid5.Visibility = Visibility.Hidden;
                 biseccion.Background = (Brush)bc.ConvertFrom("#FF232323");
                 regla_falsa.Background = (Brush)bc.ConvertFrom("#FF232323");
                 ContadorClick_tangente = true;
@@ -297,6 +231,48 @@ namespace WpfApp1
                 Tangente_button.Background = (Brush)bc.ConvertFrom("#FF232323");
                 grid4.Visibility = Visibility.Hidden;
                 ContadorClick_tangente = false;
+            }
+        }
+
+        private void Secante_button_Click(object sender, RoutedEventArgs e)
+        {
+            var bc = new BrushConverter();
+            ContadorClick_biseccion = false;
+            ContadorClick_reglafalsa = false;
+            ContadorClick_tangente = false;
+
+            if (ContadorClick_Secante == false)
+            {
+                Secante_button.Background = (Brush)bc.ConvertFrom("#FF343131");
+                grid5.Visibility = Visibility.Visible;
+                grid2.Visibility = Visibility.Hidden;
+                grid3.Visibility = Visibility.Hidden;
+                grid4.Visibility = Visibility.Hidden;
+                biseccion.Background = (Brush)bc.ConvertFrom("#FF232323");
+                regla_falsa.Background = (Brush)bc.ConvertFrom("#FF232323");
+                Tangente_button.Background = (Brush)bc.ConvertFrom("#FF232323");
+                ContadorClick_Secante = true;
+            }
+            else
+            {
+                Secante_button.Background = (Brush)bc.ConvertFrom("#FF232323");
+                grid5.Visibility = Visibility.Hidden;
+                ContadorClick_Secante = false;
+            }
+        }
+
+        private void Grey_Secante(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            Secante_button.Background = (Brush)bc.ConvertFrom("#FF343131");
+        }
+
+        private void White_Secante(object sender, MouseEventArgs e)
+        {
+            if (ContadorClick_Secante == false)
+            {
+                var bc = new BrushConverter();
+                Secante_button.Background = (Brush)bc.ConvertFrom("#FF232323");
             }
         }
     }
