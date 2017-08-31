@@ -100,11 +100,12 @@
                     </RadialGradientBrush>
                 </Button.Background>
             </Button>
-            <Label x:Name="Resultado_label_biseccion" Content="Raíz:" HorizontalAlignment="Left" Margin="330,241,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
-            <Label x:Name="ResultadoError_label_biseccion" Content="Error:" HorizontalAlignment="Left" Margin="330,293,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
+            <Label x:Name="Resultado_label_biseccion" Content="Raíz:" HorizontalAlignment="Left" Margin="330,214,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
+            <Label x:Name="ResultadoError_label_biseccion" Content="Error:" HorizontalAlignment="Left" Margin="330,258,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
             <Label Content="F(x): " HorizontalAlignment="Left" Margin="300,77,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
             <TextBox x:Name="fx_biseccion_textbox" HorizontalAlignment="Left" Height="30" Margin="300,124,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="272" FontSize="20"/>
             <Label x:Name="resultados_label_Copy1" Content="Resultados" HorizontalAlignment="Left" Margin="604,158,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449"/>
+            <Label x:Name="iterusadas_bis_label" Content="Iteraciones: " HorizontalAlignment="Left" Margin="330,300,0,0" VerticalAlignment="Top" Width="134" FontSize="20" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449" Visibility="Hidden"/>
         </Grid>
 
         <Grid x:Name="grid3" HorizontalAlignment="Left" Height="457" Margin="292,47,0,0" VerticalAlignment="Top" Width="784" Visibility="Hidden">
@@ -166,11 +167,12 @@
                     </RadialGradientBrush>
                 </Button.Background>
             </Button>
-            <Label x:Name="Resultado_label_reglafalsa" Content="Raíz:" HorizontalAlignment="Left" Margin="334,232,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
-            <Label x:Name="ResultadoError_label_reglafalsa" Content="Error:" HorizontalAlignment="Left" Margin="334,284,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
+            <Label x:Name="Resultado_label_reglafalsa" Content="Raíz:" HorizontalAlignment="Left" Margin="330,222,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
+            <Label x:Name="ResultadoError_label_reglafalsa" Content="Error:" HorizontalAlignment="Left" Margin="330,259,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.421,0.176" Visibility="Hidden"/>
             <Label Content="F(x): " HorizontalAlignment="Left" Margin="330,74,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.224,0.726"/>
             <TextBox x:Name="fx_reglafalsa_textbox" HorizontalAlignment="Left" Height="30" Margin="330,118,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="271" FontSize="20" />
             <Label x:Name="resultados_label_Copy2" Content="Resultados" HorizontalAlignment="Left" Margin="604,158,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449"/>
+            <Label x:Name="iterusadas_rf_label" Content="Iteraciones: " HorizontalAlignment="Left" Margin="330,296,0,0" VerticalAlignment="Top" Width="134" FontSize="20" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449" Visibility="Hidden"/>
         </Grid>
         <Grid x:Name="grid4" HorizontalAlignment="Left" Height="462" Margin="287,42,0,0" VerticalAlignment="Top" Width="789" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Left" Height="400" Stroke="#FF838383" StrokeThickness="10" VerticalAlignment="Top" Width="740" Margin="34,47,0,0" Opacity="0.5" RadiusY="2" RadiusX="2" RenderTransformOrigin="0.5,0.5">
@@ -231,9 +233,10 @@
             <TextBox x:Name="error_tan_textbox" HorizontalAlignment="Left" Height="43" Margin="79,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
             <Label x:Name="fx_tan_label" HorizontalAlignment="Left" Margin="371,94,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="F(x): "/>
             <TextBox x:Name="fx_tan_textbox" HorizontalAlignment="Left" Height="43" Margin="371,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
-            <Label x:Name="Resultado_label_tan" Content="Raíz:" HorizontalAlignment="Left" Margin="371,295,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
-            <Label x:Name="ResultadoError_label_tan" Content="Error:" HorizontalAlignment="Left" Margin="371,350,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.619,1.514" Visibility="Hidden"/>
+            <Label x:Name="Resultado_label_tan" Content="Raíz:" HorizontalAlignment="Left" Margin="371,278,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
+            <Label x:Name="ResultadoError_label_tan" Content="Error:" HorizontalAlignment="Left" Margin="371,315,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.619,1.514" Visibility="Hidden"/>
             <Label x:Name="resultados_label" Content="Resultados" HorizontalAlignment="Left" Margin="607,212,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449"/>
+            <Label x:Name="iterusadas_tan_label" Content="Iteraciones: " HorizontalAlignment="Left" Margin="371,357,0,0" VerticalAlignment="Top" Width="134" FontSize="20" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449" Visibility="Hidden"/>
         </Grid>
         <Grid x:Name="grid5" HorizontalAlignment="Left" Height="457" Margin="292,47,0,0" VerticalAlignment="Top" Width="784" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Left" Height="400" Stroke="#FF838383" StrokeThickness="10" VerticalAlignment="Top" Width="740" Margin="34,47,0,0" Opacity="0.5" RadiusY="2" RadiusX="2" RenderTransformOrigin="0.5,0.5">
@@ -274,7 +277,7 @@
                     <DropShadowEffect/>
                 </Rectangle.Effect>
             </Rectangle>
-            <Button x:Name="Resolver_Secante" Content="Resolver" HorizontalAlignment="Left" Margin="84,391,0,0"  VerticalAlignment="Top" Width="110" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="18" BorderThickness="0" RenderTransformOrigin="1.164,0.5" Click="Resolver_Tangente_Click">
+            <Button x:Name="Resolver_Secante" Content="Resolver" HorizontalAlignment="Left" Margin="84,391,0,0"  VerticalAlignment="Top" Width="110" Cursor="Hand" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Height="30" FontSize="18" BorderThickness="0" RenderTransformOrigin="1.164,0.5" Click="Resolver_Secante_Click">
                 <Button.Effect>
                     <DropShadowEffect Color="White" Opacity="0.5"/>
                 </Button.Effect>
@@ -287,16 +290,19 @@
             </Button>
             <Label x:Name="Iteraciones_secante_label" HorizontalAlignment="Left" Margin="79,186,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="ITERACIONES:"/>
             <Label x:Name="Error_secante_label" Content="ERROR: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Margin="79,278,0,0"/>
-            <Label x:Name="Xini_secante_label" HorizontalAlignment="Left" Margin="79,94,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="X INICIAL:"/>
+            <Label x:Name="Xini_secante_label" HorizontalAlignment="Left" Margin="79,94,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="X0:"/>
             <Label Content="Secante" HorizontalAlignment="Left" Margin="640,8,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="xini_sec_textbox" HorizontalAlignment="Left" Height="43" Margin="79,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
+            <TextBox x:Name="x0_sec_textbox" HorizontalAlignment="Left" Height="43" Margin="79,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
             <TextBox x:Name="iteraciones_sec_textbox" HorizontalAlignment="Left" Height="43" Margin="79,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
             <TextBox x:Name="error_sec_textbox" HorizontalAlignment="Left" Height="43" Margin="79,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
-            <Label x:Name="fx_sec_label" HorizontalAlignment="Left" Margin="371,94,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="F(x): "/>
-            <TextBox x:Name="fx_tan_textbox_Copy" HorizontalAlignment="Left" Height="43" Margin="371,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
-            <Label x:Name="Resultado_label_tan_Copy" Content="Raíz:" HorizontalAlignment="Left" Margin="371,295,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" Visibility="Hidden"/>
-            <Label x:Name="ResultadoError_label_tan_Copy" Content="Error:" HorizontalAlignment="Left" Margin="371,350,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.619,1.514" Visibility="Hidden"/>
+            <Label x:Name="fx_sec_label" HorizontalAlignment="Left" Margin="537,94,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="F(x): "/>
+            <TextBox x:Name="fx_sec_textbox" HorizontalAlignment="Left" Height="43" Margin="537,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
+            <Label x:Name="Resultado_label_sec" Content="Raíz:" HorizontalAlignment="Left" Margin="371,278,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" IsHitTestVisible="True" RenderTransformOrigin="0.6,0.081"/>
+            <Label x:Name="ResultadoError_label_sec" Content="Error:" HorizontalAlignment="Left" Margin="371,320,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.619,1.514"/>
             <Label x:Name="resultados_label_Copy" Content="Resultados" HorizontalAlignment="Left" Margin="607,212,0,0" VerticalAlignment="Top" Width="134" FontSize="22" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449"/>
+            <Label x:Name="iterusadas_sec_label" Content="Iteraciones: " HorizontalAlignment="Left" Margin="371,364,0,0" VerticalAlignment="Top" Width="134" FontSize="20" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.526,3.449"/>
+            <TextBox x:Name="x1_sec_textbox" HorizontalAlignment="Left" Height="43" Margin="301,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="24"/>
+            <Label x:Name="Xini_secante_label_Copy" HorizontalAlignment="Left" Margin="301,94,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="X1:"/>
         </Grid>
     </Grid>
 

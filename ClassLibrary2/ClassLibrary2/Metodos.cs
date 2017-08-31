@@ -12,7 +12,7 @@ namespace ClassLibrary2
     public class Configuraciones
     {
         public int iteraciones { get; set; }
-        public int Tolerancia { get; set; }
+        public double Tolerancia { get; set; }
         public double error;
 
 
@@ -28,7 +28,7 @@ namespace ClassLibrary2
         public double XD { get; set; }
         public double XI { get; set; }
 
-        public ResultadoRaizCerrados(int iteraciones, int tolerancia)
+        public ResultadoRaizCerrados(int iteraciones, double tolerancia)
         {
             this.iteraciones = iteraciones;
             this.Tolerancia = tolerancia;
@@ -38,8 +38,11 @@ namespace ClassLibrary2
     public class ResultadoRaizAbiertos : Resultados
     {
         public double Xini { get; set; }
+        public double x0 { get; set; }
+        public double x1 { get; set; }
 
-        public ResultadoRaizAbiertos(int iteraciones, int tolerancia)
+
+        public ResultadoRaizAbiertos(int iteraciones, double tolerancia)
         {
             this.iteraciones = iteraciones;
             this.Tolerancia = tolerancia;
@@ -70,7 +73,7 @@ namespace ClassLibrary2
                 error = Math.Abs((xr - xant) / xr);
 
 
-                while (((Math.Abs(Fxr.calculate()) >= nuevoResultado.Tolerancia)) && ((error < nuevoResultado.Tolerancia)) && ((c <= nuevoResultado.iteraciones)))
+                while (((Math.Abs(Fxr.calculate()) >= nuevoResultado.Tolerancia)) && ((error >= nuevoResultado.Tolerancia)) && ((c <= nuevoResultado.iteraciones)))
                 {
                     c++;
                     xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
@@ -108,6 +111,7 @@ namespace ClassLibrary2
                 }
             }
             nuevoResultado.error = error;
+            nuevoResultado.iteraciones = c;
             return nuevoResultado;
         }
 
@@ -133,7 +137,7 @@ namespace ClassLibrary2
                 error = Math.Abs((xr - xant) / xr);
 
 
-                while (((Math.Abs(Fxr.calculate()) >= nuevoResultado.Tolerancia)) && ((error < nuevoResultado.Tolerancia)) && ((c <= nuevoResultado.iteraciones)))
+                while (((Math.Abs(Fxr.calculate()) >= nuevoResultado.Tolerancia)) && ((error >= nuevoResultado.Tolerancia)) && ((c <= nuevoResultado.iteraciones)))
                 {
                     c++;
                     xr = (Fxd.calculate() * nuevoResultado.XD - Fxi.calculate() * nuevoResultado.XD) / (Fxd.calculate() - Fxi.calculate());
@@ -170,6 +174,7 @@ namespace ClassLibrary2
                     nuevoResultado.valorRaiz = nuevoResultado.XD;
                 }
             }
+            nuevoResultado.iteraciones = c;
             return nuevoResultado;
 
 
@@ -205,7 +210,7 @@ namespace ClassLibrary2
                     Xr = new Argument(" x = " + xr);
                     nuevoResultado.error = Math.Abs(xr - Xant) / xr;
 
-                    while ((Math.Abs(Fxr.calculate()) > nuevoResultado.Tolerancia) && (nuevoResultado.error < nuevoResultado.Tolerancia) && (c <= nuevoResultado.iteraciones))
+                    while ((Math.Abs(Fxr.calculate()) > nuevoResultado.Tolerancia) && (nuevoResultado.error >= nuevoResultado.Tolerancia) && (c <= nuevoResultado.iteraciones))
                     {
                         nuevoResultado.error = Math.Abs(xr - Xant) / xr;
                         Xant = xr;
@@ -224,9 +229,57 @@ namespace ClassLibrary2
 
                     nuevoResultado.valorRaiz = nuevoResultado.Xini;
                     nuevoResultado.error = Math.Abs(nuevoResultado.error);
+                    nuevoResultado.iteraciones = c;
                 }
 
             }
+            return nuevoResultado;
+        }
+
+        public ResultadoRaizAbiertos Secante(ResultadoRaizAbiertos nuevoResultado, Function f)
+        {
+            Argument X0 = new Argument(" x = " + nuevoResultado.x0.ToString(CultureInfo.InvariantCulture));
+            Argument X1 = new Argument(" x = " + nuevoResultado.x1.ToString(CultureInfo.InvariantCulture));
+            Argument Xr = new Argument(" x = 0 ");
+            Expression Fx0 = new Expression("f(x)", f, X0);
+            Expression Fx1 = new Expression("f(x)", f, X1);
+            Expression Fxr = new Expression("f(x)", f, Xr);
+            int c = 0;
+     
+            if ((Fx0.calculate() * Fx1.calculate()) == 0)
+            {
+                nuevoResultado.valorRaiz = nuevoResultado.Xini;
+            }
+            else
+            {
+                    double xr = 0;
+                    double Xant = 0;
+                    xr = ((Fx1.calculate() * nuevoResultado.x0) - (Fx0.calculate() * nuevoResultado.x1))/(Fx1.calculate() - Fx0.calculate());
+                    Xr = new Argument(" x = " + xr);
+                    nuevoResultado.error = Math.Abs(xr - Xant) / xr;
+                    while ((nuevoResultado.error >= nuevoResultado.Tolerancia) && (c <= nuevoResultado.iteraciones))
+                    {
+                        Xant = xr;
+                        nuevoResultado.x0 = nuevoResultado.x1;
+                        nuevoResultado.x1 = xr;
+                        X0= new Argument(" x = " + nuevoResultado.x0.ToString(CultureInfo.InvariantCulture));
+                        X1 = new Argument(" x = " + nuevoResultado.x1.ToString(CultureInfo.InvariantCulture));
+                        Fx0 = new Expression("f(x)", f, X0);
+                        Fx1 = new Expression("f(x)", f, X1);
+                        xr = (Fx1.calculate() * nuevoResultado.x0 - Fx0.calculate() * nuevoResultado.x1) / (Fx1.calculate() - Fx0.calculate());
+                        nuevoResultado.error = Math.Abs(xr - Xant) / xr;
+                        Xr = new Argument(" x = " + xr);
+                        c++;
+                    }
+
+                    nuevoResultado.valorRaiz = nuevoResultado.x1;
+                    nuevoResultado.error = Math.Abs(nuevoResultado.error);
+                    nuevoResultado.iteraciones = c;
+               
+
+
+            }
+            nuevoResultado.iteraciones = c;
             return nuevoResultado;
         }
     }

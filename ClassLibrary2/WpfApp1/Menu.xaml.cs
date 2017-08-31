@@ -142,7 +142,7 @@ namespace WpfApp1
 
         private void hacerclick(object sender, RoutedEventArgs e)
         {
-            ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_biseccion.Text), Convert.ToInt32(tolerancia_textbox_biseccion.Text));
+            ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_biseccion.Text), Convert.ToDouble(tolerancia_textbox_biseccion.Text));
             resultado.XI = Convert.ToDouble(Xi_textbox_biseccion.Text);
             resultado.XD = Convert.ToDouble(Xd_textbox_biseccion.Text);
             Function f = new Function("f(x) = " + fx_biseccion_textbox.Text);
@@ -154,15 +154,17 @@ namespace WpfApp1
 
             Resultado_label_biseccion.Content = "Raíz: " + resultado.valorRaiz;
             ResultadoError_label_biseccion.Content = "Error: " + resultado.error;
+            iterusadas_bis_label.Content = "Iteraciones: " + resultado.iteraciones;
             Resultado_label_biseccion.Visibility = Visibility.Visible;
             ResultadoError_label_biseccion.Visibility = Visibility.Visible;
+            iterusadas_bis_label.Visibility = Visibility.Visible;
         }
 
 
 
         private void ResolverRF(object sender, RoutedEventArgs e)
         {
-            ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_reglafalsa.Text), Convert.ToInt32(tolerancia_textbox_reglafalsa.Text));
+            ResultadoRaizCerrados resultado = new ResultadoRaizCerrados(Convert.ToInt32(iteraciones_textbox_reglafalsa.Text), Convert.ToDouble(tolerancia_textbox_reglafalsa.Text));
             resultado.XI = Convert.ToDouble(Xi_textbox_reglafalsa.Text);
             resultado.XD = Convert.ToDouble(Xd_textbox_reglafalsa.Text);
             Function f = new Function("f(x) = " + fx_reglafalsa_textbox.Text);
@@ -172,8 +174,10 @@ namespace WpfApp1
 
             Resultado_label_reglafalsa.Content = "Raíz: " + resultado.valorRaiz;
             ResultadoError_label_reglafalsa.Content = "Error: " + resultado.error;
+            iterusadas_rf_label.Content = "Iteraciones: " + resultado.iteraciones;
             Resultado_label_reglafalsa.Visibility = Visibility.Visible;
             ResultadoError_label_reglafalsa.Visibility = Visibility.Visible;
+            iterusadas_rf_label.Visibility = Visibility.Visible;
         }
 
 
@@ -194,7 +198,7 @@ namespace WpfApp1
 
         private void Resolver_Tangente_Click(object sender, RoutedEventArgs e)
         {
-            ResultadoRaizAbiertos resultado = new ResultadoRaizAbiertos(Convert.ToInt32(iteraciones_tan_textbox.Text), Convert.ToInt32(error_tan_textbox.Text));
+            ResultadoRaizAbiertos resultado = new ResultadoRaizAbiertos(Convert.ToInt32(iteraciones_tan_textbox.Text), Convert.ToDouble(error_tan_textbox.Text));
             resultado.Xini = Convert.ToDouble(xini_textbox.Text);
 
             Function f = new Function("f(x) = " + fx_tan_textbox.Text);
@@ -204,8 +208,10 @@ namespace WpfApp1
 
             Resultado_label_tan.Content = "Raíz: " + resultado.valorRaiz;
             ResultadoError_label_tan.Content = "Error: " + resultado.error;
+            iterusadas_tan_label.Content = "Iteraciones: " + resultado.iteraciones;
             Resultado_label_tan.Visibility = Visibility.Visible;
             ResultadoError_label_tan.Visibility = Visibility.Visible;
+            iterusadas_tan_label.Visibility = Visibility.Visible;
         }
 
         private void Tangente_button_Click(object sender, RoutedEventArgs e)
@@ -274,6 +280,25 @@ namespace WpfApp1
                 var bc = new BrushConverter();
                 Secante_button.Background = (Brush)bc.ConvertFrom("#FF232323");
             }
+        }
+
+        private void Resolver_Secante_Click(object sender, RoutedEventArgs e)
+        {
+            ResultadoRaizAbiertos resultado = new ResultadoRaizAbiertos(Convert.ToInt32(iteraciones_sec_textbox.Text), Convert.ToDouble(error_sec_textbox.Text));
+            resultado.x0 = Convert.ToDouble(x0_sec_textbox.Text);
+            resultado.x1 = Convert.ToDouble(x1_sec_textbox.Text);
+
+            Function f = new Function("f(x) = " + fx_sec_textbox.Text);
+            var Metodos = new Metodos();
+
+            Metodos.Secante(resultado, f);
+
+            Resultado_label_sec.Content = "Raíz: " + resultado.valorRaiz;
+            ResultadoError_label_sec.Content = "Error: " + resultado.error;
+            iterusadas_sec_label.Content = "Iteraciones: " + resultado.iteraciones;
+            Resultado_label_tan.Visibility = Visibility.Visible;
+            ResultadoError_label_tan.Visibility = Visibility.Visible;
+            iterusadas_tan_label.Visibility = Visibility.Visible;
         }
     }
 }
