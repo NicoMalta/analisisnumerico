@@ -137,21 +137,25 @@ namespace ClassLibrary2
                 error = Math.Abs((xr - xant) / xr);
 
 
-                while (((Math.Abs(Fxr.calculate()) >= nuevoResultado.Tolerancia)) && ((error >= nuevoResultado.Tolerancia)) && ((c <= nuevoResultado.iteraciones)))
+                while (((Math.Abs(Fxr.calculate()) > nuevoResultado.Tolerancia)) && ((error >= nuevoResultado.Tolerancia)) && ((c < nuevoResultado.iteraciones)))
                 {
                     c++;
-                    xr = (Fxd.calculate() * nuevoResultado.XD - Fxi.calculate() * nuevoResultado.XD) / (Fxd.calculate() - Fxi.calculate());
+
+                    xr = (-(Fxd.calculate() * nuevoResultado.XI) + (Fxi.calculate() * nuevoResultado.XD)) / (Fxd.calculate() - Fxi.calculate());
                     Xr = new Argument(" x = " + xr);
+                    Fxr = new Expression("f(x)", f, Xr);
                     error = Math.Abs((xr - xant) / xr);
                     if (Fxi.calculate() * Fxd.calculate() < 0)
                     {
                         nuevoResultado.XD = xr;
                         Xd = new Argument(" x = " + nuevoResultado.XI);
+                        Fxi = new Expression("f(x)", f, Xi);
                     }
                     else
                     {
                         nuevoResultado.XI = xr;
                         Xi = new Argument(" x = " + nuevoResultado.XD);
+                        Fxd = new Expression("f(x)", f, Xd);
                     }
                     xant = xr;
                     band = true;
