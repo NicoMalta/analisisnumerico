@@ -150,7 +150,7 @@ namespace WpfApp1
             
             var Metodos = new Metodos();
 
-            Metodos.Biseccion(resultado, f);
+            resultado = Metodos.Biseccion(resultado, f);
 
             Resultado_label_biseccion.Content = "Raíz: " + resultado.valorRaiz;
             ResultadoError_label_biseccion.Content = "Error: " + resultado.error;
