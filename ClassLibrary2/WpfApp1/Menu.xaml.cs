@@ -30,6 +30,10 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            Grilla a = new Grilla();
+             a.Show();
+
+
         }
 
 

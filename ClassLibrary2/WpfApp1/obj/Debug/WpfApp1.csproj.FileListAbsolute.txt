@@ -127,3 +127,4 @@ C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ko\Syst
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+D:\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Grilla.resources
