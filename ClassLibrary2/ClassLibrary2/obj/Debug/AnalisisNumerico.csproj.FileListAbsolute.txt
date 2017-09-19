@@ -16,3 +16,10 @@ C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\
 C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
 C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
 D:\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\MathParser.org-mXparser.Net452.dll
+C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\MathParser.org-mXparser.Net452.dll
+C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\AnalisisNumerico.csprojResolveAssemblyReference.cache
+C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\AnalisisNumerico.csproj.CoreCompileInputs.cache
+C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb

@@ -15,8 +15,8 @@ namespace WpfApp1
         public Grilla()
         {
             InitializeComponent();
-            dataGridView1.RowCount = 5;
-            dataGridView1.ColumnCount = 5;
+
+          
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -30,6 +30,59 @@ namespace WpfApp1
             }
 
             Convert.ToInt32(dataGridView1.Rows[0].Cells[0].Value);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.RowCount = Convert.ToInt32(textBox1.Text);
+            dataGridView1.ColumnCount = Convert.ToInt32(textBox1.Text) + 1;
+            dataGridView1.RowHeadersVisible = false;
+     
+            for (int i = 0; i < Convert.ToInt32(textBox1.Text) + 1; i++)
+            {
+                
+                dataGridView1.Columns[i].HeaderText = "x" + i;
+               
+                if ((Convert.ToInt32(textBox1.Text)) == i)
+                {
+                    dataGridView1.Columns[i].HeaderText = "Resultado";
+                }
+                
+            }
+
+            
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            double[,] aux = new double[Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox1.Text) + 1];
+
+            for (int c = 0; c <= Convert.ToInt32(textBox1.Text)-1; c++)
+            {
+                for (int f = 0; f <= Convert.ToInt32(textBox1.Text); f++)
+                {
+                    double elem;
+                    var esValido = double.TryParse(dataGridView1.Rows[c].Cells[f].Value.ToString(), out elem);
+                    
+                    if (esValido)
+                    {
+                        aux[c, f] = elem;
+                    }
+
+                }
+            }
         }
     }
 }
