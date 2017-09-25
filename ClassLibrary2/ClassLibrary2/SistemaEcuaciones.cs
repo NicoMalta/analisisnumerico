@@ -8,7 +8,7 @@ namespace ClassLibrary2
 {
     public  class SistemaEcuaciones
     {
-        public double[,] pivoteo(double[,] matriz, int columna, int cEcuaciones)
+       public double[,] pivoteo(double[,] matriz, int columna, int cEcuaciones)
         {
             bool band = false;
             double mayor = 0;
