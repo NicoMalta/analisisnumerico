@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -83,6 +84,9 @@ namespace WpfApp1
 
                 }
             }
+
+            SistemaEcuaciones Jordan = new SistemaEcuaciones();
+            Jordan.Gaussj(aux, Convert.ToInt32(textBox1.Text));
         }
     }
 }

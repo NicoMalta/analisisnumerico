@@ -6,42 +6,136 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary2
 {
-    class SistemaEcuaciones
+    public  class SistemaEcuaciones
     {
-        public double[,] pivoteo(double[,] matriz)
+        public double[,] pivoteo(double[,] matriz, int columna, int cEcuaciones)
         {
+            bool band = false;
+            double mayor = 0;
+            int posmayor = 0;
+            int poscero = 0;
+            double[] aux = new double[cEcuaciones+1];
+            double[] aux2 = new double[cEcuaciones+1];
+            for (int i = 0; i < cEcuaciones; i++)
+            {
+                if (band == false)
+                {
+                    mayor = Math.Abs(matriz[i,columna]);
+                    band = true;
+                }
+                else 
+                {
+                    if ((mayor < Math.Abs(matriz[i, columna])))
+                    {
+                        mayor = Math.Abs(matriz[i, columna]);
+                    }
+                 
+                }
+            }
 
+            for (int i = 0; i < cEcuaciones; i++)
+            {
+                if (mayor == Math.Abs(matriz[i, columna]))
+                {
+                    for (int j = 0; j < cEcuaciones+1; j++)
+                    {
+                        aux[j] = matriz[i, j];
+                        posmayor = j;
+                    }
+                }
+                if (0 == Math.Abs(matriz[i, columna]))
+                {
+                    for (int j = 0; j < cEcuaciones+1; j++)
+                    {
+                        poscero = j;
+                        aux2[j] = matriz[i, j];
+                    }
+                }
+            }
+
+            for (int i = 0; i < cEcuaciones; i++)
+            {
+                if (mayor == Math.Abs(matriz[i, columna]))
+                {
+                    for (int j = 0; j < cEcuaciones + 1; j++)
+                    {
+                        matriz[i, j] = aux2[j];
+                    }
+                }
+                else
+                {
+                    if ((0 == Math.Abs(matriz[i, columna])))
+                    {
+                        for (int j = 0; j < cEcuaciones + 1; j++)
+                        {
+                            matriz[i, j] = aux[j];
+                        }
+                    }
+                }
+
+            }
+
+            return matriz;
         }
 
        public double[,] Gaussj(double[,] matriz, int cEcuaciones)
         {
-          int normalizada = 1;
-            int ceros = 1;
-            if (matriz[1,1] == 0)
+            bool normalizada = false;
+            for (int columna = 0; columna < cEcuaciones; columna++)
             {
-                matriz = pivoteo(matriz);
-            }
-            double aux;
-            bool band = false;
-            for (int i = 1; i < cEcuaciones; i++)
-            {
-                double[] Ecuacion = new double[cEcuaciones + 1];
-                for (int c = 0; c < cEcuaciones+1; c++)
+                for (int fila = 0; fila < cEcuaciones; fila++)
                 {
-                    Ecuacion[c] = matriz[i, c];
+                    if (columna == fila)
+                    {
+                        if (matriz[columna,fila] == 0)
+                        {
+                          matriz = pivoteo(matriz,columna,cEcuaciones);
+                        }
+
+                        List<double> EcuacionNormalizada = new List<double>();
+                        normalizada = false;
+                        for (int i = columna; i < cEcuaciones - 1; i++)
+                        {
+                            List<double> Ecuacion = new List<double>();
+                            double multiplo = matriz[i + 1, fila];
+                            foreach (var item in EcuacionNormalizada)
+                            {
+                                Ecuacion.Add(item);
+                            }
+                            for (int c = fila; c < cEcuaciones + 1; c++)
+                            {
+                                    if (normalizada == false)
+                                    {
+                                        EcuacionNormalizada.Add(matriz[i, c]);
+                                        EcuacionNormalizada[c-fila] = EcuacionNormalizada[c-fila] / (matriz[columna, fila]);
+
+                                        Ecuacion.Add(EcuacionNormalizada[c-fila]);
+                                        if (c == cEcuaciones)
+                                        {
+                                            for (int j = fila; j < cEcuaciones + 1; j++)
+                                            {
+                                                  matriz[i, j] = EcuacionNormalizada[j - fila];
+                                            }
+                                            normalizada = true;
+                                        }
+                                    }
+                            }
+
+                            for (int j = fila; j < cEcuaciones + 1; j++)
+                            {
+                                Ecuacion[j-fila] = Ecuacion[j-fila] * multiplo;
+                                matriz[i + 1, j] = matriz[i + 1, j] - Ecuacion[j-fila];
+                               
+                            }
+                        }
                 }
-
-                for (int c = 0; c < cEcuaciones + 1; c++)
-                {
-                    Ecuacion[c] = Ecuacion[c] / matriz[i, ceros];
-                    Ecuacion[c] = Ecuacion[c] / matriz[i+1, ceros];
-                    matriz[i + 1, c] = matriz[i + 1, c] - Ecuacion[c];
-                }
-
-
-                band = false;
             }
-         
+
+    
+
+            }
+
+            return matriz;
         }
     }
 }

@@ -184,3 +184,4 @@ C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csproj.Gene
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Grilla.resources
