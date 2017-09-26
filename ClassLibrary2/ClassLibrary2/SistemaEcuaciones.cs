@@ -81,7 +81,7 @@ namespace ClassLibrary2
        public double[,] Gaussj(double[,] matriz, int cEcuaciones)
         {
             bool normalizada = false;
-            for (int columna = 0; columna < cEcuaciones; columna++)
+            for (int columna = 0; columna < cEcuaciones ; columna++)
             {
                 for (int fila = 0; fila < cEcuaciones; fila++)
                 {
@@ -94,10 +94,10 @@ namespace ClassLibrary2
 
                         List<double> EcuacionNormalizada = new List<double>();
                         normalizada = false;
-                        for (int i = columna; i < cEcuaciones - 1; i++)
+                        for (int i = columna; i < cEcuaciones ; i++)
                         {
                             List<double> Ecuacion = new List<double>();
-                            double multiplo = matriz[i + 1, fila];
+                           
                             foreach (var item in EcuacionNormalizada)
                             {
                                 Ecuacion.Add(item);
@@ -120,19 +120,76 @@ namespace ClassLibrary2
                                         }
                                     }
                             }
-
-                            for (int j = fila; j < cEcuaciones + 1; j++)
+                            if (i != cEcuaciones -1)
                             {
-                                Ecuacion[j-fila] = Ecuacion[j-fila] * multiplo;
-                                matriz[i + 1, j] = matriz[i + 1, j] - Ecuacion[j-fila];
-                               
+                                double multiplo = matriz[i + 1, fila];
+                                for (int j = fila; j < cEcuaciones + 1; j++)
+                                {
+                                    Ecuacion[j - fila] = Ecuacion[j - fila] * multiplo;
+                                    matriz[i + 1, j] = matriz[i + 1, j] - Ecuacion[j - fila];
+
+                                }
                             }
+
                         }
                 }
             }
+            }
 
-    
+            // INVERSA
 
+            for (int columna = cEcuaciones; columna > 0; columna--)
+            {
+                for (int fila = cEcuaciones-1; fila > 0 ; fila--)
+                {
+                    if (columna == fila)
+                    {
+                        if (matriz[columna, fila] == 0)
+                        {
+                            matriz = pivoteo(matriz, columna, cEcuaciones);
+                        }
+
+                        List<double> EcuacionNormalizada = new List<double>();
+                        normalizada = false;
+                        for (int i = cEcuaciones-1; i > columna-1 ; i--)
+                        {
+                            List<double> Ecuacion = new List<double>();
+
+                            foreach (var item in EcuacionNormalizada)
+                            {
+                                Ecuacion.Add(item);
+                            }
+                            for (int c = cEcuaciones ; c > fila-1; c--)
+                            {
+                                if (normalizada == false)
+                                {
+                                    EcuacionNormalizada.Add(matriz[i, c]);
+                                    EcuacionNormalizada[cEcuaciones - c] = EcuacionNormalizada[cEcuaciones - c] / (matriz[columna, fila]);
+
+                                    Ecuacion.Add(EcuacionNormalizada[cEcuaciones - c]);
+                                    if (c == fila)
+                                    {
+                                        for (int j = cEcuaciones; j > fila; j--)
+                                        {
+                                            matriz[i, j] = EcuacionNormalizada[(cEcuaciones) - j];
+                                        }
+                                        normalizada = true;
+                                    }
+                                }
+                            }
+
+                                double multiplo = matriz[i -1 , cEcuaciones - fila];
+                                for (int j = cEcuaciones; j > fila; j--)
+                                {
+                                    Ecuacion[cEcuaciones - j] = Ecuacion[(cEcuaciones) - j] * multiplo;
+                                    matriz[i -1, j] = matriz[i -1, j] - Ecuacion[cEcuaciones - j];
+
+                                }
+                            
+
+                        }
+                    }
+                }
             }
 
             return matriz;

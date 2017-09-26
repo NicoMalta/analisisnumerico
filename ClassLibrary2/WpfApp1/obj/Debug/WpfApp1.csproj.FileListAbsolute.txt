@@ -128,6 +128,7 @@ C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ru\Syst
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 D:\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Grilla.resources
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Grilla.resources
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\WpfApp1.exe.config
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\WpfApp1.exe
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\WpfApp1.pdb
@@ -155,16 +156,6 @@ C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.MSXML.dll
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ClassLibrary2.pdb
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Modeling.SDK.Integration.Shell.15.0.resources.dll
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.Windows.Design.Interaction.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\de\System.Windows.Interactivity.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\en\System.Windows.Interactivity.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\System.Windows.Interactivity.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\fr\System.Windows.Interactivity.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\it\System.Windows.Interactivity.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ja\System.Windows.Interactivity.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ko\System.Windows.Interactivity.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ru\System.Windows.Interactivity.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
-C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Shell.15.0.resources.dll
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.resources.dll
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.Windows.Design.Extensibility.resources.dll
@@ -184,4 +175,3 @@ C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csproj.Gene
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Facultad\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.pdb
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Grilla.resources
