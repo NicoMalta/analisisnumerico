@@ -78,9 +78,9 @@ namespace ClassLibrary2
             return matriz;
         }
 
-       public double[,] Gaussj(double[,] Matriz, int cEcuaciones)
+       public double[,] Gaussj(double[,] matriz, int cEcuaciones)
         {
-            double[,] matriz = { { 0.02, 0.06, 0.05, 0.01, 18.1 }, { 0.05, 0.02, 0, 0, 8.7 }, { 0, 0.02, 0.01, 0.06, 18 }, { 0.04, 0.03, 0.02, 0.03, 18.9 } };
+            //double[,] matriz = { { 0.02, 0.06, 0.05, 0.01, 18.1 }, { 0.05, 0.02, 0, 0, 8.7 }, { 0, 0.02, 0.01, 0.06, 18 }, { 0.04, 0.03, 0.02, 0.03, 18.9 } };
             bool normalizada = false;
             for (int columna = 0; columna < cEcuaciones ; columna++)
             {
@@ -200,6 +200,9 @@ namespace ClassLibrary2
         {
             var ListaCoeficientes = new List<double>();
             var ListaResultados = new List<double>();
+            var ListaResultadosAnterior = new List<double>();
+            double Error = 0.001;
+            double tolerancia = 1;
             double resultado = 0;
             for (int i = 0; i < cEcuaciones; i++)
             {
@@ -219,7 +222,7 @@ namespace ClassLibrary2
                 ListaResultados.Add(0);
             }
             int contador = 0;
-            while (contador != 3)
+            while (Error < tolerancia)
             {
                 for (int i = 0; i < cEcuaciones; i++)
                 {
@@ -231,17 +234,15 @@ namespace ClassLibrary2
                         }
                     }
                     int variable = i;
-                    matriz[i, cEcuaciones] = matriz[i, cEcuaciones] - resultado;
-                    matriz[i, cEcuaciones] = matriz[i, cEcuaciones] / ListaCoeficientes[i];
-                    ListaResultados[i] = matriz[i, cEcuaciones];
+                    resultado = matriz[i, cEcuaciones] - resultado;
+                    resultado = resultado / ListaCoeficientes[i];
+                    tolerancia = Math.Abs(Math.Abs(ListaResultados[i]) - Math.Abs(resultado));
+                    ListaResultados[i] = resultado;
                     resultado = 0;
                 }
                 contador++;
             }
-            for (int i = 0; i < cEcuaciones; i++)
-            {
-                ListaResultados[i] = (matriz[i,cEcuaciones]);
-            }
+
 
             return ListaResultados;
         }
