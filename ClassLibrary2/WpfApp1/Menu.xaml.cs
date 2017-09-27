@@ -26,14 +26,11 @@ namespace WpfApp1
         public bool ContadorClick_reglafalsa { get; set; }
         public bool ContadorClick_tangente { get; set; }
         public bool ContadorClick_Secante { get; set; }
+        public bool ContadorClick_Ecuaciones { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-            Grilla a = new Grilla();
-             a.Show();
-
-
         }
 
 
@@ -51,6 +48,7 @@ namespace WpfApp1
             ContadorClick_reglafalsa = false;
             ContadorClick_tangente = false;
             ContadorClick_Secante = false;
+            ContadorClick_Ecuaciones = false;
             var bc = new BrushConverter();
             if (ContadorClick_biseccion == false)
             {
@@ -106,6 +104,7 @@ namespace WpfApp1
             ContadorClick_biseccion = false;
             ContadorClick_tangente = false;
             ContadorClick_Secante = false;
+            ContadorClick_Ecuaciones = false;
 
             if (ContadorClick_reglafalsa == false)
             {
@@ -224,6 +223,7 @@ namespace WpfApp1
             ContadorClick_biseccion = false;
             ContadorClick_reglafalsa = false;
             ContadorClick_Secante = false;
+            ContadorClick_Ecuaciones = false;
 
             if (ContadorClick_tangente == false)
             {
@@ -250,6 +250,7 @@ namespace WpfApp1
             ContadorClick_biseccion = false;
             ContadorClick_reglafalsa = false;
             ContadorClick_tangente = false;
+            ContadorClick_Ecuaciones = false;
 
             if (ContadorClick_Secante == false)
             {
@@ -303,6 +304,32 @@ namespace WpfApp1
             Resultado_label_tan.Visibility = Visibility.Visible;
             ResultadoError_label_tan.Visibility = Visibility.Visible;
             iterusadas_tan_label.Visibility = Visibility.Visible;
+        }
+
+        private void ecuaciones_grey(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            SistEcuac_button.Background = (Brush)bc.ConvertFrom("#FF343131");
+        }
+
+        private void ecuaciones_white(object sender, MouseEventArgs e)
+        {
+            if (ContadorClick_Ecuaciones == false)
+            {
+                var bc = new BrushConverter();
+                SistEcuac_button.Background = (Brush)bc.ConvertFrom("#FF232323");
+            }
+        }
+
+        private void grilla_button(object sender, RoutedEventArgs e)
+        {
+            ContadorClick_biseccion = false;
+            ContadorClick_reglafalsa = false;
+            ContadorClick_tangente = false;
+            ContadorClick_Secante = false;
+          
+            Grilla a = new Grilla();
+            a.Show();
         }
     }
 }

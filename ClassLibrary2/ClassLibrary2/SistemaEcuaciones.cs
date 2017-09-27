@@ -151,7 +151,7 @@ namespace ClassLibrary2
 
                         List<double> EcuacionNormalizada = new List<double>();
                         normalizada = false;
-                        for (int i = cEcuaciones-1; i > columna-1 ; i--)
+                        for (int i = fila; i > 0 ; i--)
                         {
                             List<double> Ecuacion = new List<double>();
 
@@ -178,8 +178,8 @@ namespace ClassLibrary2
                                 }
                             }
 
-                                double multiplo = matriz[i -1 , cEcuaciones - fila];
-                                for (int j = cEcuaciones; j > fila; j--)
+                                double multiplo = matriz[i -1 ,  fila];
+                                for (int j = cEcuaciones; j > fila-1; j--)
                                 {
                                     Ecuacion[cEcuaciones - j] = Ecuacion[(cEcuaciones) - j] * multiplo;
                                     matriz[i -1, j] = matriz[i -1, j] - Ecuacion[cEcuaciones - j];
@@ -193,6 +193,56 @@ namespace ClassLibrary2
             }
 
             return matriz;
+        }
+
+       public List<double> GaussS(double[,] matriz,  int cEcuaciones, double error)
+        {
+            var ListaCoeficientes = new List<double>();
+            var ListaResultados = new List<double>();
+            double resultado = 0;
+            for (int i = 0; i < cEcuaciones; i++)
+            {
+                for (int j = 0; j < cEcuaciones; j++)
+                {
+                    if (i == j)
+                    {
+                        if (matriz[i, j] == 0)
+                        {
+                            matriz = pivoteo(matriz, j, cEcuaciones);
+                        }
+
+                        ListaCoeficientes.Add(matriz[i,j]);
+                        matriz[i, j] = 0;
+                    }
+                }
+                ListaResultados.Add(0);
+            }
+            int contador = 0;
+            while (contador != 3)
+            {
+                for (int i = 0; i < cEcuaciones; i++)
+                {
+                    for (int j = 0; j < cEcuaciones ; j++)
+                    {
+                        if (i != j)
+                        {
+                            resultado = resultado - (ListaResultados[j] * matriz[i, j]);
+                        }
+                    }
+                    int variable = i;
+                    matriz[i, cEcuaciones] = matriz[i, cEcuaciones] - resultado;
+                    matriz[i, cEcuaciones] = matriz[i, cEcuaciones] / ListaCoeficientes[i];
+                    ListaResultados[i] = matriz[i, cEcuaciones];
+
+                }
+                contador++;
+            }
+            for (int i = 0; i < cEcuaciones; i++)
+            {
+                ListaResultados[i] = (matriz[i,cEcuaciones]);
+            }
+
+            return ListaResultados;
         }
     }
 }

@@ -3,12 +3,6 @@ D:\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
 D:\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
 D:\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
 D:\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\AnalisisNumerico.csprojResolveAssemblyReference.cache
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.dll
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\MathParser.org-mXparser.Net452.dll
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\AnalisisNumerico.csprojResolveAssemblyReference.cache
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
-C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
 C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.dll
 C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
 C:\Users\ucsea.dar.LABORATORIOS\Downloads\analisisnumerico-master\ClassLibrary2\ClassLibrary2\bin\Debug\MathParser.org-mXparser.Net452.dll
@@ -23,3 +17,9 @@ C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\AnalisisNumer
 C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\AnalisisNumerico.csproj.CoreCompileInputs.cache
 C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
 C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\MathParser.org-mXparser.Net452.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\AnalisisNumerico.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
