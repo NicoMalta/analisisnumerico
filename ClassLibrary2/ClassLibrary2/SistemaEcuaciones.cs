@@ -78,8 +78,9 @@ namespace ClassLibrary2
             return matriz;
         }
 
-       public double[,] Gaussj(double[,] matriz, int cEcuaciones)
+       public double[,] Gaussj(double[,] Matriz, int cEcuaciones)
         {
+            double[,] matriz = { { 0.02, 0.06, 0.05, 0.01, 18.1 }, { 0.05, 0.02, 0, 0, 8.7 }, { 0, 0.02, 0.01, 0.06, 18 }, { 0.04, 0.03, 0.02, 0.03, 18.9 } };
             bool normalizada = false;
             for (int columna = 0; columna < cEcuaciones ; columna++)
             {
@@ -169,7 +170,7 @@ namespace ClassLibrary2
                                     Ecuacion.Add(EcuacionNormalizada[cEcuaciones - c]);
                                     if (c == fila)
                                     {
-                                        for (int j = cEcuaciones; j > fila; j--)
+                                        for (int j = cEcuaciones ; j > fila; j--)
                                         {
                                             matriz[i, j] = EcuacionNormalizada[(cEcuaciones) - j];
                                         }
@@ -226,14 +227,14 @@ namespace ClassLibrary2
                     {
                         if (i != j)
                         {
-                            resultado = resultado - (ListaResultados[j] * matriz[i, j]);
+                            resultado = resultado + (ListaResultados[j] * (matriz[i, j]));
                         }
                     }
                     int variable = i;
                     matriz[i, cEcuaciones] = matriz[i, cEcuaciones] - resultado;
                     matriz[i, cEcuaciones] = matriz[i, cEcuaciones] / ListaCoeficientes[i];
                     ListaResultados[i] = matriz[i, cEcuaciones];
-
+                    resultado = 0;
                 }
                 contador++;
             }

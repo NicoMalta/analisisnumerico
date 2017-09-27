@@ -72,13 +72,13 @@ namespace WpfApp1
 
             double[,] aux = new double[Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox1.Text) + 1];
 
-            for (int c = 0; c <= Convert.ToInt32(textBox1.Text)-1; c++)
+            for (int c = 0; c <= Convert.ToInt32(textBox1.Text) - 1; c++)
             {
                 for (int f = 0; f <= Convert.ToInt32(textBox1.Text); f++)
                 {
                     double elem;
                     var esValido = double.TryParse(dataGridView1.Rows[c].Cells[f].Value.ToString(), out elem);
-                    
+
                     if (esValido)
                     {
                         aux[c, f] = elem;
@@ -137,7 +137,7 @@ namespace WpfApp1
 
             button4.Enabled = true;
             button2.Enabled = false;
-            button3.Enabled = false;
+           button3.Enabled = false;
 
             SistemaEcuaciones Seidel = new SistemaEcuaciones();
             Seidel.GaussS(aux, Convert.ToInt32(textBox1.Text),0);
