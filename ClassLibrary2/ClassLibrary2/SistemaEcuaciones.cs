@@ -14,6 +14,8 @@ namespace ClassLibrary2
             double mayor = 0;
             int posmayor = 0;
             int poscero = 0;
+            bool auxListo = false;
+            bool aux2Listo = false;
             double[] aux = new double[cEcuaciones+1];
             double[] aux2 = new double[cEcuaciones+1];
             for (int i = 0; i < cEcuaciones; i++)
@@ -35,34 +37,38 @@ namespace ClassLibrary2
 
             for (int i = 0; i < cEcuaciones; i++)
             {
-                if (mayor == Math.Abs(matriz[i, columna]))
+                if (mayor == Math.Abs(matriz[i, columna]) && auxListo != true)
                 {
                     for (int j = 0; j < cEcuaciones+1; j++)
                     {
                         aux[j] = matriz[i, j];
                         posmayor = j;
                     }
+                    auxListo = true;
                 }
-                if (0 == Math.Abs(matriz[i, columna]))
+                if (0 == Math.Abs(matriz[i, columna]) && aux2Listo != true)
                 {
                     for (int j = 0; j < cEcuaciones+1; j++)
                     {
                         poscero = j;
                         aux2[j] = matriz[i, j];
                     }
+                    aux2Listo = true;
                 }
             }
-
+            auxListo = false;
+            aux2Listo = false;
             for (int i = 0; i < cEcuaciones; i++)
             {
-                if (mayor == Math.Abs(matriz[i, columna]))
+                if ((mayor == Math.Abs(matriz[i, columna])) && (aux2Listo != true))
                 {
                     for (int j = 0; j < cEcuaciones + 1; j++)
                     {
                         matriz[i, j] = aux2[j];
                     }
+                    aux2Listo = true;
                 }
-                else
+                else if (auxListo != true)
                 {
                     if ((0 == Math.Abs(matriz[i, columna])))
                     {
@@ -71,6 +77,7 @@ namespace ClassLibrary2
                             matriz[i, j] = aux[j];
                         }
                     }
+                    auxListo = true;
                 }
 
             }
@@ -80,7 +87,9 @@ namespace ClassLibrary2
 
        public double[,] Gaussj(double[,] matriz, int cEcuaciones)
         {
-            //double[,] matriz = { { 0.02, 0.06, 0.05, 0.01, 18.1 }, { 0.05, 0.02, 0, 0, 8.7 }, { 0, 0.02, 0.01, 0.06, 18 }, { 0.04, 0.03, 0.02, 0.03, 18.9 } };
+          //  double[,] matriz = { { 0,	1, -1, 0, 4, 0 }, {1, 1, 5,	0, 0, 0 }, {2, -0.5, 0,	-1,	0, 20}, { 0, -1, 0.25, -0.2, -0.2,	17 } ,{0.5, 0, 0.25, -1,	0, 0 }};
+
+
             bool normalizada = false;
             for (int columna = 0; columna < cEcuaciones ; columna++)
             {
@@ -88,9 +97,9 @@ namespace ClassLibrary2
                 {
                     if (columna == fila)
                     {
-                        if (matriz[columna,fila] == 0)
+                        if ((matriz[columna, fila]) == 0)
                         {
-                          matriz = pivoteo(matriz,columna,cEcuaciones);
+                            matriz = pivoteo(matriz, columna, cEcuaciones);
                         }
 
                         List<double> EcuacionNormalizada = new List<double>();
@@ -145,7 +154,7 @@ namespace ClassLibrary2
                 {
                     if (columna == fila)
                     {
-                        if (matriz[columna, fila] == 0)
+                        if ((matriz[columna, fila]) == 0)
                         {
                             matriz = pivoteo(matriz, columna, cEcuaciones);
                         }
@@ -252,32 +261,28 @@ namespace ClassLibrary2
 
        public List<double> GaussS(double[,] matriz,  int cEcuaciones, double error)
         {
+          //  double[,] matriz = { { 0, 1, -1, 0, 4, 0 }, { 1, 1, 5, 0, 0, 0 }, { 2, -0.5, 0, -1, 0, 20 }, { 0, -1, 0.25, -0.2, -0.2, 17 }, { 0.5, 0, 0.25, -1, 0, 0 } };
             var ListaCoeficientes = new List<double>();
             var ListaResultados = new List<double>();
             var ListaResultadosAnterior = new List<double>();
             double Error = 0.001;
             double tolerancia = 1;
             double resultado = 0;
+
+            matriz = pivoteoDD(matriz,cEcuaciones);
             for (int i = 0; i < cEcuaciones; i++)
             {
                 for (int j = 0; j < cEcuaciones; j++)
                 {
                     if (i == j)
-                    {
-                        if (matriz[i, j] == 0)
-                        {
-                            matriz = pivoteo(matriz, j, cEcuaciones);
-                        }
-
-                        ListaCoeficientes.Add(matriz[i,j]);
-                      //  matriz[i, j] = 0;
+                    { 
+                        ListaCoeficientes.Add(matriz[i, j]);
                     }
                 }
                 ListaResultados.Add(0);
             }
-            matriz = pivoteoDD(matriz,cEcuaciones);
             double contador = 0;
-            while ((Error < tolerancia) || (contador > 500) )
+            while ((Error < tolerancia) && (contador > 500) )
             {
                 for (int i = 0; i < cEcuaciones; i++)
                 {

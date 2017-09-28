@@ -84,7 +84,7 @@ namespace WpfApp1
                     if (esValido)
                     {
                         aux[c, f] = elem;
-        }
+                    }
 
                 }
             }
@@ -172,10 +172,10 @@ namespace WpfApp1
         {
             button1.Enabled = true;
             button4.Enabled = false;
+            button2.Enabled = true;
+            button3.Enabled = true;
             dataGridView2.RowCount = 0;
             dataGridView2.ColumnCount = 0;
-            dataGridView1.RowCount = 0;
-            dataGridView1.ColumnCount = 0;
 
         }
     }
