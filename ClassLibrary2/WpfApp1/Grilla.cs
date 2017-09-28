@@ -139,10 +139,33 @@ namespace WpfApp1
 
             button4.Enabled = true;
             button2.Enabled = false;
-           button3.Enabled = false;
+            button3.Enabled = false;
 
             SistemaEcuaciones Seidel = new SistemaEcuaciones();
-            Seidel.GaussS(aux, Convert.ToInt32(textBox1.Text),0);
+            var ListaResultados = new List<double>();
+            ListaResultados = Seidel.GaussS(aux, Convert.ToInt32(textBox1.Text),0);
+
+
+            dataGridView2.ColumnCount = Convert.ToInt32(textBox1.Text) + 1;
+            dataGridView2.RowCount = 1;
+            dataGridView2.RowHeadersVisible = false;
+            for (int i = 0; i < Convert.ToInt32(textBox1.Text) + 1; i++)
+            {
+
+                dataGridView2.Columns[i].HeaderText = "x" + i;
+
+                if ((Convert.ToInt32(textBox1.Text)) == i)
+                {
+                    dataGridView2.Columns[i].HeaderText = "ITERACIONES";
+                }
+
+            }
+
+                for (int f = 0; f <= Convert.ToInt32(textBox1.Text); f++)
+                {
+                    dataGridView2.Rows[0].Cells[f].Value = ListaResultados[f];
+                }
+
         }
 
         private void button4_Click(object sender, EventArgs e)

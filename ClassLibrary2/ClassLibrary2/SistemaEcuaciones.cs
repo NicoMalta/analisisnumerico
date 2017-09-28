@@ -196,6 +196,60 @@ namespace ClassLibrary2
             return matriz;
         }
 
+       public double[,] pivoteoDD(double[,] matriz, int cEcuaciones)
+        {
+            var diagdominante = false;
+            double sumatoria = 0;
+
+            for (int i = 0; i < cEcuaciones; i++)
+            {
+                
+                var FilaAntigua = new List<double>();
+                for (int j = 0; j < cEcuaciones+1; j++)
+                {
+                    FilaAntigua.Add(matriz[i, j]);
+                    if ((i != j) && (j < cEcuaciones))
+                    {
+                        sumatoria = sumatoria + Math.Abs(matriz[i, j]); 
+                    }
+                }
+                if (Math.Abs(matriz[i,i]) > sumatoria)
+                {
+                    diagdominante = true;
+                }
+                else
+                {
+                    for (int c = i+1; c < cEcuaciones; c++)
+                    {
+                        double sumatoriaaux = 0;
+                        var FilaAuxiliar = new List<double>();
+                        for (int x = 0; x < cEcuaciones+1; x++)
+                        {
+                            FilaAuxiliar.Add(matriz[c,x]);
+                            if ((i != x) && (x < cEcuaciones))
+                            {
+                                sumatoriaaux = sumatoriaaux + Math.Abs(matriz[c, x]);
+                            }
+                        }
+                        if (Math.Abs(matriz[c, i]) > sumatoriaaux)
+                        {
+                            for (int z = 0; z < cEcuaciones +1 ; z++)
+                            {
+                                matriz[i, z] = FilaAuxiliar[z];
+                                matriz[c, z] = FilaAntigua[z];
+                                diagdominante = true;
+                               
+                            }
+                            c = cEcuaciones;
+                        }
+                    }
+                }
+                diagdominante = false;
+            }
+
+            return matriz;
+        }  
+
        public List<double> GaussS(double[,] matriz,  int cEcuaciones, double error)
         {
             var ListaCoeficientes = new List<double>();
@@ -216,13 +270,14 @@ namespace ClassLibrary2
                         }
 
                         ListaCoeficientes.Add(matriz[i,j]);
-                        matriz[i, j] = 0;
+                      //  matriz[i, j] = 0;
                     }
                 }
                 ListaResultados.Add(0);
             }
-            int contador = 0;
-            while (Error < tolerancia)
+            matriz = pivoteoDD(matriz,cEcuaciones);
+            double contador = 0;
+            while ((Error < tolerancia) || (contador > 500) )
             {
                 for (int i = 0; i < cEcuaciones; i++)
                 {
@@ -242,7 +297,7 @@ namespace ClassLibrary2
                 }
                 contador++;
             }
-
+            ListaResultados.Add(contador);
 
             return ListaResultados;
         }
