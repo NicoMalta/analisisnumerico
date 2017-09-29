@@ -265,7 +265,7 @@ namespace ClassLibrary2
             var ListaCoeficientes = new List<double>();
             var ListaResultados = new List<double>();
             var ListaResultadosAnterior = new List<double>();
-            double Error = 0.001;
+            double Error = 0.000001;
             double tolerancia = 1;
             double resultado = 0;
 
@@ -282,7 +282,7 @@ namespace ClassLibrary2
                 ListaResultados.Add(0);
             }
             double contador = 0;
-            while ((Error < tolerancia) && (contador > 500) )
+            while ((Error < tolerancia) && (contador < 500) )
             {
                 for (int i = 0; i < cEcuaciones; i++)
                 {
