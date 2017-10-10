@@ -18,7 +18,7 @@ namespace ClassLibrary2
             bool aux2Listo = false;
             double[] aux = new double[cEcuaciones+1];
             double[] aux2 = new double[cEcuaciones+1];
-            for (int i = 0; i < cEcuaciones; i++)
+            for (int i = columna; i < cEcuaciones; i++)
             {
                 if (band == false)
                 {
@@ -35,7 +35,7 @@ namespace ClassLibrary2
                 }
             }
 
-            for (int i = 0; i < cEcuaciones; i++)
+            for (int i = columna; i < cEcuaciones; i++)
             {
                 if (mayor == Math.Abs(matriz[i, columna]) && auxListo != true)
                 {
@@ -58,7 +58,7 @@ namespace ClassLibrary2
             }
             auxListo = false;
             aux2Listo = false;
-            for (int i = 0; i < cEcuaciones; i++)
+            for (int i = columna; i < cEcuaciones; i++)
             {
                 if ((mayor == Math.Abs(matriz[i, columna])) && (aux2Listo != true))
                 {

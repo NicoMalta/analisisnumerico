@@ -58,7 +58,7 @@ namespace ClassLibrary2
 
             Argument Xi = new Argument(" x = " + nuevoResultado.XI.ToString(CultureInfo.InvariantCulture));
             Argument Xd = new Argument(" x = " + nuevoResultado.XD.ToString(CultureInfo.InvariantCulture));
-            Argument Xr = new Argument(" x = 0 ");
+            Argument Xr = new Argument(" x = " + ((nuevoResultado.XI + nuevoResultado.XD) / 2).ToString(CultureInfo.InvariantCulture));
             Expression Fxi = new Expression("f(x)", f, Xi);
             Expression Fxd = new Expression("f(x)", f, Xd);
             Expression Fxr = new Expression("f(x)", f, Xr);
@@ -69,7 +69,8 @@ namespace ClassLibrary2
             if ((Fxi.calculate() * Fxd.calculate()) < 0)
             {
                 xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
-                Xr = new Argument(" x = " + xr );
+                Xr = new Argument(" x = " + xr.ToString(CultureInfo.InvariantCulture));
+                Fxr = new Expression("f(x)", f, Xr);
                 error = Math.Abs((xr - xant) / xr);
 
 
@@ -124,7 +125,7 @@ namespace ClassLibrary2
         {
             Argument Xi = new Argument(" x = " + nuevoResultado.XI.ToString(CultureInfo.InvariantCulture));
             Argument Xd = new Argument(" x = " + nuevoResultado.XD.ToString(CultureInfo.InvariantCulture));
-            Argument Xr = new Argument(" x = 0 ");
+            Argument Xr = new Argument(" x = " + ((nuevoResultado.XI + nuevoResultado.XD) / 2).ToString(CultureInfo.InvariantCulture));
             Expression Fxi = new Expression("f(x)", f, Xi);
             Expression Fxd = new Expression("f(x)", f, Xd);
             Expression Fxr = new Expression("f(x)", f, Xr);
@@ -135,7 +136,8 @@ namespace ClassLibrary2
             if ((Fxi.calculate() * Fxd.calculate()) < 0)
             {
                 xr = (nuevoResultado.XI + nuevoResultado.XD) / 2;
-                Xr = new Argument(" x = " + xr);
+                Xr = new Argument(" x = " + xr.ToString(CultureInfo.InvariantCulture));
+                Fxr = new Expression("f(x)", f, Xr);
                 error = Math.Abs((xr - xant) / xr);
 
 
@@ -274,7 +276,7 @@ namespace ClassLibrary2
                         Fx1 = new Expression("f(x)", f, X1);
                         xr = (Fx1.calculate() * nuevoResultado.x0 - Fx0.calculate() * nuevoResultado.x1) / (Fx1.calculate() - Fx0.calculate());
                         nuevoResultado.error = Math.Abs(xr - Xant) / xr;
-                        Xr = new Argument(" x = " + xr);
+                        Xr = new Argument(" x = " + xr.ToString(CultureInfo.InvariantCulture));
                         c++;
                     }
 

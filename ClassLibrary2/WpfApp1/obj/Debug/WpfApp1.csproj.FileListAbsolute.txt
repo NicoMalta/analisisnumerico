@@ -165,3 +165,96 @@ C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\WpfApp1.exe.config
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\WpfApp1.exe
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\WpfApp1.pdb
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ClassLibrary2.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\MathParser.org-mXparser.Net452.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Modeling.SDK.Integration.Shell.15.0.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.15.0.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.Framework.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\EnvDTE.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\stdole.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.MSXML.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ClassLibrary2.pdb
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Modeling.SDK.Integration.Shell.15.0.resources.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\en\Microsoft.Windows.Design.Interaction.resources.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.Windows.Design.Interaction.resources.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Shell.15.0.resources.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.resources.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\en\Microsoft.Windows.Design.Extensibility.resources.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.Windows.Design.Extensibility.resources.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.GraphModel.resources.dll
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\Menu.g.cs
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\App.g.cs
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\App.baml
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\Menu.baml
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.g.resources
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Grilla.resources
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.exe
+D:\Para el parcial\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ClassLibrary2.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\MathParser.org-mXparser.Net452.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Modeling.SDK.Integration.Shell.15.0.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.15.0.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.Framework.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\EnvDTE.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\stdole.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\Microsoft.MSXML.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\ClassLibrary2.pdb
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Modeling.SDK.Integration.Shell.15.0.resources.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.Windows.Design.Interaction.resources.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Shell.15.0.resources.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.resources.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.Windows.Design.Extensibility.resources.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\bin\Debug\es\Microsoft.VisualStudio.GraphModel.resources.dll
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\Menu.g.cs
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\App.g.cs
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\App.baml
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\Menu.baml
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Grilla.resources
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\LautaroM\Desktop\analisisnumerico\ClassLibrary2\WpfApp1\obj\Debug\WpfApp1.pdb

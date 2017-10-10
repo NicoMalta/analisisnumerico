@@ -115,9 +115,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary2\AnalisisNumerico.csproj">
+    <ProjectReference Include="..\ClassLibrary2\Entidades.AnalisisNumerico.csproj">
       <Project>{33E31105-244E-4533-A901-F2360542EDCE}</Project>
-      <Name>AnalisisNumerico</Name>
+      <Name>Entidades.AnalisisNumerico</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
