@@ -306,6 +306,8 @@
             <Label x:Name="Xini_secante_label_Copy" HorizontalAlignment="Left" Margin="301,94,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Content="X1:"/>
         </Grid>
         <Label Content="# Sist. de Ecuaciones" HorizontalAlignment="Left" Margin="18,292,0,0" VerticalAlignment="Top" Foreground="#FFAEAEAE" Width="194" FontSize="18" FontFamily="Arial" FontStyle="Italic"/>
+        <Label Content="# Regresión" HorizontalAlignment="Left" Margin="18,375,0,0" VerticalAlignment="Top" Foreground="#FFAEAEAE" Width="194" FontSize="18" FontFamily="Arial" FontStyle="Italic"/>
+        <Button x:Name="regresion_button" Content="Regresión Lineal" HorizontalAlignment="Left" Margin="-5,411,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" Foreground="White" Click="click_bttn_regresion"/>
     </Grid>
 
 

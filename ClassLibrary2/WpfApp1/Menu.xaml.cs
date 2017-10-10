@@ -331,5 +331,11 @@ namespace WpfApp1
             Grilla a = new Grilla();
             a.Show();
         }
+
+        private void click_bttn_regresion(object sender, RoutedEventArgs e)
+        {
+            Regresion a = new Regresion();
+            a.Show();
+        }
     }
 }
