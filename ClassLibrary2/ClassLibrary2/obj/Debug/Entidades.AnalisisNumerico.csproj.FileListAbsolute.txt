@@ -5,3 +5,9 @@ C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\Entidades.Ana
 C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\Entidades.AnalisisNumerico.csproj.CoreCompileInputs.cache
 C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
 C:\Facultad\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\bin\Debug\MathParser.org-mXparser.Net452.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\Entidades.AnalisisNumerico.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+C:\Users\Nico\Documents\analisisnumerico\ClassLibrary2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb

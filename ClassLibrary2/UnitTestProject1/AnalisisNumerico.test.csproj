@@ -40,6 +40,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -61,6 +62,10 @@
     <ProjectReference Include="..\ClassLibrary2\Entidades.AnalisisNumerico.csproj">
       <Project>{33E31105-244E-4533-A901-F2360542EDCE}</Project>
       <Name>Entidades.AnalisisNumerico</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfApp1\MenuWPF.csproj">
+      <Project>{5539A746-ED79-483F-BA13-5C0DE998CF32}</Project>
+      <Name>MenuWPF</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
