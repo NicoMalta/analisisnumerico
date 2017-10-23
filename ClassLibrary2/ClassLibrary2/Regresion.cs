@@ -128,5 +128,29 @@ namespace ClassLibrary2
             return Polinomio;
 
         }
+
+        public void lagrange()
+        {
+            double[] x = { 1, 2, 3, 4, 5, 6 };
+            double[] y = { -3, -165, -789, -1851, -1851, 4167 };
+            double[] l = new double[6];
+            double x_0 = 1.5;
+            double y_0 = 0;
+
+            for (int i = 0; i < 6; i++)
+            {
+                l[i] = 1;
+                for (int j = 0; j < 6; j++)
+                {
+                    if (i != j)
+                    {
+                        l[i] = l[i] * ((x_0 - x[j]) / (x[i] - x[j]));
+                    }
+                    y_0 = y_0 + l[i] * y[i];
+                }
+
+            }
+        
+        }
     }
 }
