@@ -47,7 +47,7 @@ namespace ClassLibrary2
                 {
                     suma += Math.Pow(ListaX[i], k);
                 }
-                listasuma.Add(suma);                
+                listasuma.Add(suma);
             }
             for (int k = 0; k <= grado; k++)
             {
@@ -93,64 +93,65 @@ namespace ClassLibrary2
                     potencia++;
                 }
                 sr = sr + Math.Pow((ListaY[i] + aux), 2);
-                aux = 0; 
+                aux = 0;
             }
             r = Math.Sqrt((st - sr) / st) * 100;
             return r;
-         
+
         }
 
         public List<double> RP_MinimoCuadrados(List<double> ListaX, List<double> ListaY, double error)
         {
             var Polinomio = new List<double>();
-            
+
             double r = 0;
             int grado = 1;
             double[,] matriz = new double[grado + 1, grado + 2];
             SistemaEcuaciones probando = new SistemaEcuaciones();
-            
-            while (r < error && grado < 10 )
+
+            while (r < error && grado < 10)
             {
                 matriz = new double[grado + 1, grado + 2];
                 Polinomio = new List<double>();
-                matriz = Calcoeficientes(ListaX,ListaY, grado);
+                matriz = Calcoeficientes(ListaX, ListaY, grado);
                 matriz = probando.Gaussj(matriz, matriz.GetLength(0));
                 for (int i = 0; i <= grado; i++)
                 {
                     Polinomio.Add(matriz[i, (grado + 1)]);
                 }
-                r = CalR(ListaX,ListaY, Polinomio);
+                r = CalR(ListaX, ListaY, Polinomio);
                 grado++;
             }
 
 
-           
+
             return Polinomio;
 
         }
 
-        public void lagrange()
+        public double CalLagrange(List<double> ListaX, List<double> ListaY, double x0)
         {
-            double[] x = { 1, 2, 3, 4, 5, 6 };
-            double[] y = { -3, -165, -789, -1851, -1851, 4167 };
-            double[] l = new double[6];
-            double x_0 = 1.5;
+          
+            double resultado = 0;
             double y_0 = 0;
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < ListaX.Count(); i++)
             {
-                l[i] = 1;
-                for (int j = 0; j < 6; j++)
+                double resultadoarriba = 1;
+                double resultadoabajo = 1;
+
+                for (int j = 0; j < ListaX.Count(); j++)
                 {
                     if (i != j)
                     {
-                        l[i] = l[i] * ((x_0 - x[j]) / (x[i] - x[j]));
+                        resultadoarriba  = resultadoarriba * (x0 - ListaX[j]);
+                        resultadoabajo = resultadoabajo * (ListaX[i] - ListaX[j]);
                     }
-                    y_0 = y_0 + l[i] * y[i];
                 }
 
+                y_0 = y_0 + (resultadoarriba/resultadoabajo) * ListaY[i];
             }
-        
+            return y_0;
         }
     }
 }

@@ -75,8 +75,37 @@ namespace UnitTestProject1
             //listay.Add(5);
 
             //double error = 80;
-            regresion.lagrange();
+           // regresion.lagrange();
             //regresion.RP_MinimoCuadrados(listax, listay, error);
+
+
+
+        }
+
+        [TestMethod]
+        public void TestMethod4()
+        {
+            var arrayX = new double[6] { -1, 0, 2, 3, 5, 6 };
+            var arrayY = new double[6] { 6, 4, 1, 1, 2, 5 };
+            ClassLibrary2.Regresion regresion = new ClassLibrary2.Regresion();
+            var listax = new List<double>();
+            var listay = new List<double>();
+            listax.Add(-1);
+            listax.Add(0);
+            listax.Add(2);
+            listax.Add(3);
+            listax.Add(5);
+            listax.Add(6);
+            listay.Add(6);
+            listay.Add(4);
+            listay.Add(1);
+            listay.Add(1);
+            listay.Add(2);
+            listay.Add(5);
+
+            double error = 80;
+
+            regresion.lagrange(listax, listay, 4);
 
 
 
