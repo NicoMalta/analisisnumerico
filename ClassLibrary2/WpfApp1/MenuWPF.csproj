@@ -73,11 +73,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Regresion.cs">
+    <Compile Include="Form.Regresion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Regresion.Designer.cs">
-      <DependentUpon>Regresion.cs</DependentUpon>
+    <Compile Include="Form.Regresion.Designer.cs">
+      <DependentUpon>Form.Regresion.cs</DependentUpon>
     </Compile>
     <Compile Include="Grilla.cs">
       <SubType>Form</SubType>
@@ -111,8 +111,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Regresion.resx">
-      <DependentUpon>Regresion.cs</DependentUpon>
+    <EmbeddedResource Include="Form.Regresion.resx">
+      <DependentUpon>Form.Regresion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

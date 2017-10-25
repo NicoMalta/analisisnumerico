@@ -334,7 +334,7 @@ namespace WpfApp1
 
         private void click_bttn_regresion(object sender, RoutedEventArgs e)
         {
-            Regresion a = new Regresion();
+            FormRegresion a = new FormRegresion();
             a.Show();
         }
     }

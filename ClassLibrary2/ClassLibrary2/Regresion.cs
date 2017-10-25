@@ -10,9 +10,10 @@ namespace ClassLibrary2
     {
 
 
-        public List<double> RL_MinimosCuadrados(int n, List<double> ListaX, List<double> ListaY)
+        public List<double> RL_MinimosCuadrados(List<double> ListaX, List<double> ListaY)
         {
             double aux = 0;
+            int n = ListaX.Count();
             int contador = 0;
             var ListaResultados = new List<double>();
             foreach (var x in ListaX)
