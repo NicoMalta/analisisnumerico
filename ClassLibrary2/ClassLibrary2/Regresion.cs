@@ -124,7 +124,7 @@ namespace ClassLibrary2
                 grado++;
             }
 
-
+            Polinomio.Add(r);
 
             return Polinomio;
 

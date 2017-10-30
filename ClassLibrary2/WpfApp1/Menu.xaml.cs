@@ -27,6 +27,7 @@ namespace WpfApp1
         public bool ContadorClick_tangente { get; set; }
         public bool ContadorClick_Secante { get; set; }
         public bool ContadorClick_Ecuaciones { get; set; }
+        public bool ContadorClick_Regresion { get; set; }
 
         public MainWindow()
         {
@@ -49,6 +50,7 @@ namespace WpfApp1
             ContadorClick_tangente = false;
             ContadorClick_Secante = false;
             ContadorClick_Ecuaciones = false;
+            ContadorClick_Regresion = false;
             var bc = new BrushConverter();
             if (ContadorClick_biseccion == false)
             {
@@ -105,6 +107,7 @@ namespace WpfApp1
             ContadorClick_tangente = false;
             ContadorClick_Secante = false;
             ContadorClick_Ecuaciones = false;
+            ContadorClick_Regresion = false;
 
             if (ContadorClick_reglafalsa == false)
             {
@@ -251,6 +254,7 @@ namespace WpfApp1
             ContadorClick_reglafalsa = false;
             ContadorClick_tangente = false;
             ContadorClick_Ecuaciones = false;
+            ContadorClick_Regresion = false;
 
             if (ContadorClick_Secante == false)
             {
@@ -321,19 +325,43 @@ namespace WpfApp1
             }
         }
 
+
+
         private void grilla_button(object sender, RoutedEventArgs e)
         {
             ContadorClick_biseccion = false;
             ContadorClick_reglafalsa = false;
             ContadorClick_tangente = false;
             ContadorClick_Secante = false;
-          
+            ContadorClick_Regresion = false;
+
             Grilla a = new Grilla();
             a.Show();
         }
 
+        private void regresion_grey(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            regresion_button.Background = (Brush)bc.ConvertFrom("#FF343131");
+        }
+
+        private void regresion_white(object sender, MouseEventArgs e)
+        {
+            if (ContadorClick_Regresion == false)
+            {
+                var bc = new BrushConverter();
+                regresion_button.Background = (Brush)bc.ConvertFrom("#FF232323");
+            }
+        }
+
         private void click_bttn_regresion(object sender, RoutedEventArgs e)
         {
+            ContadorClick_biseccion = false;
+            ContadorClick_reglafalsa = false;
+            ContadorClick_tangente = false;
+            ContadorClick_Secante = false;
+            ContadorClick_Ecuaciones = false;
+
             FormRegresion a = new FormRegresion();
             a.Show();
         }
