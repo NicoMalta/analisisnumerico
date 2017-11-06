@@ -49,8 +49,6 @@ namespace UnitTestProject1
 
             regresion.RP_MinimoCuadrados(listax,listay,error);
 
-            
-
         }
 
         [TestMethod]
@@ -82,33 +80,75 @@ namespace UnitTestProject1
 
         }
 
+        //[TestMethod]
+        //public void TestMethod4()
+        //{
+        //    var arrayX = new double[6] { -1, 0, 2, 3, 5, 6 };
+        //    var arrayY = new double[6] { 6, 4, 1, 1, 2, 5 };
+        //    ClassLibrary2.Regresion regresion = new ClassLibrary2.Regresion();
+        //    var listax = new List<double>();
+        //    var listay = new List<double>();
+        //    listax.Add(-1);
+        //    listax.Add(0);
+        //    listax.Add(2);
+        //    listax.Add(3);
+        //    listax.Add(5);
+        //    listax.Add(6);
+        //    listay.Add(6);
+        //    listay.Add(4);
+        //    listay.Add(1);
+        //    listay.Add(1);
+        //    listay.Add(2);
+        //    listay.Add(5);
+
+        //    double error = 80;
+
+        //    //regresion.lagrange(listax, listay, 4);
+
+
+
+        //}
+
         [TestMethod]
-        public void TestMethod4()
+        public void TestMethod5()
         {
-            var arrayX = new double[6] { -1, 0, 2, 3, 5, 6 };
-            var arrayY = new double[6] { 6, 4, 1, 1, 2, 5 };
-            ClassLibrary2.Regresion regresion = new ClassLibrary2.Regresion();
-            var listax = new List<double>();
-            var listay = new List<double>();
-            listax.Add(-1);
-            listax.Add(0);
-            listax.Add(2);
-            listax.Add(3);
-            listax.Add(5);
-            listax.Add(6);
-            listay.Add(6);
-            listay.Add(4);
-            listay.Add(1);
-            listay.Add(1);
-            listay.Add(2);
-            listay.Add(5);
+            Function f = new Function("f(x) = 1/x + x");
 
-            double error = 80;
+            var probando = new IntegracionNumerica();
 
-            regresion.lagrange(listax, listay, 4);
+            var a = probando.TrapeciosSimple(0.5, 3.5, f);
+            var b = probando.Simpson13Multiple(0.5, 3.5, f, 40);
+            var C = probando.Simpson38(0.5, 3.5, f, 20);
 
+        }
 
+        [TestMethod]
+        public void TestMethod6()
+        {
+            Function f = new Function("f(x) = 1/x + x");
 
+            var probando = new IntegracionNumerica();
+
+            var a = probando.TrapeciosMultiple(0.5, 3.5, f,18);
+        }
+
+        [TestMethod]
+        public void TestMethod7()
+        {
+            Function f = new Function("f(x) = x^3 + 2");
+
+            var probando = new IntegracionNumerica();
+
+            var a = probando.Simpson13(0, 2, f);
+        }
+
+        public void TestMethod8()
+        {
+            Function f = new Function("f(x) = 1/x + x");
+
+            var probando = new IntegracionNumerica();
+
+            var b = probando.Simpson13Multiple(0.5, 3.5, f, 40);
         }
     }
 }

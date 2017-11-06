@@ -32,6 +32,8 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            Integracion a = new Integracion();
+            a.Show();
         }
 
 
@@ -43,8 +45,7 @@ namespace WpfApp1
 
         private void biseccion_Click(object sender, RoutedEventArgs e)
         {
-            //Window1 a = new Window1();
-            //a.Show();
+
             //this.Close();
             ContadorClick_reglafalsa = false;
             ContadorClick_tangente = false;

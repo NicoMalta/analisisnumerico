@@ -135,6 +135,7 @@ namespace ClassLibrary2
           
             double resultado = 0;
             double y_0 = 0;
+            var Aux = new List<double>();
 
             for (int i = 0; i < ListaX.Count(); i++)
             {
@@ -149,7 +150,7 @@ namespace ClassLibrary2
                         resultadoabajo = resultadoabajo * (ListaX[i] - ListaX[j]);
                     }
                 }
-
+                Aux.Add((resultadoarriba / resultadoabajo) * ListaY[i]);
                 y_0 = y_0 + (resultadoarriba/resultadoabajo) * ListaY[i];
             }
             return y_0;

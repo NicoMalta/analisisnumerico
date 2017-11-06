@@ -85,6 +85,12 @@
     <Compile Include="Grilla.Designer.cs">
       <DependentUpon>Grilla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Integracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracion.Designer.cs">
+      <DependentUpon>Integracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -106,6 +112,9 @@
     </Compile>
     <EmbeddedResource Include="Grilla.resx">
       <DependentUpon>Grilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracion.resx">
+      <DependentUpon>Integracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

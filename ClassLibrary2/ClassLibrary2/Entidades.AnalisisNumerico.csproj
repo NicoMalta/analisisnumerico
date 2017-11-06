@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntegracionNumerica.cs" />
     <Compile Include="Metodos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Regresion.cs" />
