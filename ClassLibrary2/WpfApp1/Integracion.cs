@@ -51,7 +51,7 @@ namespace WpfApp1
         private void bttn_s38_Click(object sender, EventArgs e)
         {
             var integrar = new IntegracionNumerica();
-            lbl_resultado.Text = Convert.ToString(integrar.Simpson38(Convert.ToDouble(txt_a.Text), Convert.ToDouble(txt_b.Text), new Function("f(x) = "+txt_funcion.Text), Convert.ToInt32(txt_n.Text)));
+            lbl_resultado.Text = Convert.ToString(integrar.Simpson38(Convert.ToDouble(txt_a.Text), Convert.ToDouble(txt_b.Text), new Function("f(x) = "+txt_funcion.Text)));
         }
     }
 }

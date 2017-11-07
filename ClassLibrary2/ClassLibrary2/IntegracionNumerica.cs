@@ -43,7 +43,7 @@ namespace ClassLibrary2
 
         public double Simpson13(double a, double b, Function f)
         {
-            double h = (b - a) / 2;
+            double h = (a + b) / 2;
             Argument x0 = new Argument(" x = " + a.ToString(CultureInfo.InvariantCulture));
             Argument x1 = new Argument(" x = " + h.ToString(CultureInfo.InvariantCulture));
             Argument x2 = new Argument(" x = " + b.ToString(CultureInfo.InvariantCulture));
@@ -51,10 +51,11 @@ namespace ClassLibrary2
             Expression Fx1 = new Expression("f(x)", f, x1);
             Expression Fx2 = new Expression("f(x)", f, x2);
 
-            double Area = (h / 3) * (Fx0.calculate() + (4 * Fx1.calculate()) + Fx2.calculate());
+            double Area = ((b - a)/6) * (Fx0.calculate() + (4 * Fx1.calculate()) + Fx2.calculate());
 
             return Area;
         }
+
 
         public double Simpson13Multiple(double a, double b, Function f, int n)
         {
@@ -68,20 +69,20 @@ namespace ClassLibrary2
             double aux = 0;
             if ((n % 2 ) != 0)
             {
-                for (int i = 1; i < n-3; i += 2)
+                for (int i = 1; i < n-4; i += 2)
                 {
                     Argument xi = new Argument(" x = " + (a + i * h).ToString(CultureInfo.InvariantCulture));
                     Expression Fxi = new Expression("f(x)", f, xi);
                     Sumatoria1 = Sumatoria1 + Fxi.calculate();
                 }
-                for (int i = 2; i < n - 4; i += 2)
+                for (int i = 2; i < n - 5; i += 2)
                 {
                     Argument xi = new Argument(" x = " + (a + i * h).ToString(CultureInfo.InvariantCulture));
                     Expression Fxi = new Expression("f(x)", f, xi);
                     Sumatoria2 = Sumatoria2 + Fxi.calculate();
                 }
 
-                aux = Simpson38(a + (n-4) * h, a + n * h, f, 3);
+                aux = Simpson38(a + (n-4) * h, a + n * h, f);
             }
             else
             {
@@ -99,13 +100,13 @@ namespace ClassLibrary2
                 }
             }
 
-            double Area = (h / 3) * (Fx0.calculate() + 4 * Sumatoria1 + 2 * Sumatoria2 + Fxn.calculate()) + aux;
+            double Area = ((b - a) / (3 * n)) * (Fx0.calculate() + 4 * Sumatoria1 + 2 * Sumatoria2 + Fxn.calculate()) + aux;
             
             return Area;
         }
 
 
-        public double Simpson38(double a, double b, Function f, int n)
+        public double Simpson38(double a, double b, Function f)
         {
             double h = (b - a) / 3;
             Argument x0 = new Argument(" x = " + a.ToString(CultureInfo.InvariantCulture));
