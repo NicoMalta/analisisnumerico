@@ -366,5 +366,18 @@ namespace WpfApp1
             FormRegresion a = new FormRegresion();
             a.Show();
         }
+
+
+        private void click_bttn_integracion(object sender, RoutedEventArgs e)
+        {
+            ContadorClick_biseccion = false;
+            ContadorClick_reglafalsa = false;
+            ContadorClick_tangente = false;
+            ContadorClick_Secante = false;
+            ContadorClick_Ecuaciones = false;
+
+            Integracion a = new Integracion();
+            a.Show();
+        }
     }
 }

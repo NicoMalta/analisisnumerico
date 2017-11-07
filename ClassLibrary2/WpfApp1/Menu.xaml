@@ -6,9 +6,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"      
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Analisis Numerico" Height="504.5" Width="1075.5" WindowStartupLocation="CenterScreen" Icon="Images/hashtag.png" Background="#FF343131" BorderBrush="Black" OpacityMask="Black" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize">
+        Title="Analisis Numerico" Height="538.5" Width="1075.5" WindowStartupLocation="CenterScreen" Icon="Images/hashtag.png" Background="#FF343131" BorderBrush="Black" OpacityMask="Black" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
-        <Rectangle Fill="#FF191919" HorizontalAlignment="Left" Height="462" Margin="0,42,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="287" Opacity="0.6"/>
+        <Rectangle Fill="#FF191919" HorizontalAlignment="Left" Height="496" Margin="0,42,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="287" Opacity="0.6"/>
         <Rectangle Fill="#FF232323" HorizontalAlignment="Left" Height="42" Stroke="Black" VerticalAlignment="Top" Width="1076" StrokeThickness="0"/>
         <Label Content="# Métodos Cerrados" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Foreground="#FFAEAEAE" Width="194" FontSize="18" FontFamily="Arial" FontStyle="Italic"/>
         <Label Content="# Métodos Abiertos" HorizontalAlignment="Left" Margin="12,177,0,0" VerticalAlignment="Top" Foreground="#FFAEAEAE" Width="194" FontSize="18" FontFamily="Arial" FontStyle="Italic"/>
@@ -17,7 +17,7 @@
         <Button x:Name="Tangente_button" Content="Tangente" HorizontalAlignment="Left" Margin="0,208,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" MouseEnter="Grey_Tangente" MouseLeave="White_Tangente" Foreground="White" Click="Tangente_button_Click"/>
         <Button x:Name="Secante_button" Content="Secante" HorizontalAlignment="Left" Margin="0,250,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" MouseEnter="Grey_Secante" MouseLeave="White_Secante" Foreground="White" Click="Secante_button_Click"/>
         <Button x:Name="SistEcuac_button" Content="Sist. de ecuaciones" HorizontalAlignment="Left" Margin="0,328,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" Foreground="White" Click="grilla_button" MouseEnter="ecuaciones_grey" MouseLeave="ecuaciones_white"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="469" Margin="286,41,0,-6" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5"
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="497" Margin="286,41,0,0" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5"
 >
             <Border.RenderTransform>
                 <TransformGroup>
@@ -308,6 +308,8 @@
         <Label Content="# Sist. de Ecuaciones" HorizontalAlignment="Left" Margin="18,292,0,0" VerticalAlignment="Top" Foreground="#FFAEAEAE" Width="194" FontSize="18" FontFamily="Arial" FontStyle="Italic"/>
         <Label Content="# Regresión" HorizontalAlignment="Left" Margin="18,375,0,0" VerticalAlignment="Top" Foreground="#FFAEAEAE" Width="194" FontSize="18" FontFamily="Arial" FontStyle="Italic"/>
         <Button x:Name="regresion_button" Content="Regresión Lineal" HorizontalAlignment="Left" Margin="-5,411,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" Foreground="White" Click="click_bttn_regresion" MouseEnter="regresion_grey" MouseLeave="regresion_white"/>
+        <Label Content="# Integración" HorizontalAlignment="Left" Margin="18,453,0,0" VerticalAlignment="Top" Foreground="#FFAEAEAE" Width="194" FontSize="18" FontFamily="Arial" FontStyle="Italic"/>
+        <Button x:Name="integracion_button" Content="Integracion" HorizontalAlignment="Left" Margin="-5,484,0,0" VerticalAlignment="Top" Width="287" Height="42" Background="#FF232323" FontFamily="Nirmala UI" FontSize="28" BorderThickness="0" Cursor="Hand" Foreground="White" Click="click_bttn_regresion" MouseEnter="regresion_grey" MouseLeave="regresion_white"/>
     </Grid>
 
 

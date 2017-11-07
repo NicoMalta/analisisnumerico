@@ -65,20 +65,42 @@ namespace ClassLibrary2
             Expression Fxn = new Expression("f(x)", f, xn);
             double Sumatoria1 = 0;
             double Sumatoria2 = 0;
-            for (int i = 1; i < n; i+=2)
+            double aux = 0;
+            if ((n % 2 ) != 0)
             {
-                Argument xi = new Argument(" x = " + (a + i * h).ToString(CultureInfo.InvariantCulture));
-                Expression Fxi = new Expression("f(x)", f, xi);
-                Sumatoria1 = Sumatoria1 + Fxi.calculate();
-            }
-            for (int i = 2; i < n-1; i += 2)
-            {
-                Argument xi = new Argument(" x = " + (a + i * h).ToString(CultureInfo.InvariantCulture));
-                Expression Fxi = new Expression("f(x)", f, xi);
-                Sumatoria2 = Sumatoria2 + Fxi.calculate();
-            }
-            double Area = (h / 3) * (Fx0.calculate() + 4 * Sumatoria1 + 2 * Sumatoria2 + Fxn.calculate());
+                for (int i = 1; i < n-3; i += 2)
+                {
+                    Argument xi = new Argument(" x = " + (a + i * h).ToString(CultureInfo.InvariantCulture));
+                    Expression Fxi = new Expression("f(x)", f, xi);
+                    Sumatoria1 = Sumatoria1 + Fxi.calculate();
+                }
+                for (int i = 2; i < n - 4; i += 2)
+                {
+                    Argument xi = new Argument(" x = " + (a + i * h).ToString(CultureInfo.InvariantCulture));
+                    Expression Fxi = new Expression("f(x)", f, xi);
+                    Sumatoria2 = Sumatoria2 + Fxi.calculate();
+                }
 
+                aux = Simpson38(a + (n-4) * h, a + n * h, f, 3);
+            }
+            else
+            {
+                for (int i = 1; i < n; i += 2)
+                {
+                    Argument xi = new Argument(" x = " + (a + i * h).ToString(CultureInfo.InvariantCulture));
+                    Expression Fxi = new Expression("f(x)", f, xi);
+                    Sumatoria1 = Sumatoria1 + Fxi.calculate();
+                }
+                for (int i = 2; i < n - 1; i += 2)
+                {
+                    Argument xi = new Argument(" x = " + (a + i * h).ToString(CultureInfo.InvariantCulture));
+                    Expression Fxi = new Expression("f(x)", f, xi);
+                    Sumatoria2 = Sumatoria2 + Fxi.calculate();
+                }
+            }
+
+            double Area = (h / 3) * (Fx0.calculate() + 4 * Sumatoria1 + 2 * Sumatoria2 + Fxn.calculate()) + aux;
+            
             return Area;
         }
 
